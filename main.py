@@ -30,9 +30,15 @@ def index():
 
 @app.route('/data.json')
 def get_data():
-    text = [e.display() for _, e in data.items()]
-    # return jsonify(text)
-    content = gzip.compress(json.dumps(text).encode('utf8'), 5)
+    content = []
+    for id, e in data.items():
+        try:
+            content += [e.display()]
+        except Exception:
+            import traceback
+            print(f'Failed to display {id}:')
+            traceback.print_exc()
+    content = gzip.compress(json.dumps(content).encode('utf8'), 5)
     response = make_response(content)
     response.headers['Content-Length'] = str(len(content))
     response.headers['Content-Encoding'] = 'gzip'

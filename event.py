@@ -294,7 +294,6 @@ def get_timestamp(d: t.Any) -> float | None:
                     return time.mktime(time.strptime(d, fmt))
                 except ValueError:
                     pass
-            print(f'failed to parse date {d}')
             return None
         case _:
             return None

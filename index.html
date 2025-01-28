@@ -81,6 +81,8 @@
         <option value="11">11</option>
     </select>
 
+    <h1 id="loading_text">Загрузка...</h1>
+
     <table id="dataTable">
         <thead>
             <tr id="tableHeader"></tr>
@@ -208,6 +210,9 @@ async function initialize() {
 
     create_table_header(columns);
     update_table(data, columns);
+
+    document.getElementById('loading_text').style.display = 'none';
+
 }
 
 initialize();
