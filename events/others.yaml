@@ -44,14 +44,10 @@ $lomonosov_2024:
   date: 2024-2025
 lomonosov_2024_qual:
   $: $lomonosov_2024 $lomonosov_qual
-  date:
-    start: октябрь 2024
-    end: декабрь 2024
+  date: 10.2024-12.2024
 lomonosov_2024_final:
   $: $lomonosov_2024 $lomonosov_final
-  date:
-    start: февраль 2025
-    end: март 2025
+  date: 02.2025-03.2025
 
 ##################################################
 
@@ -247,10 +243,10 @@ yumsh_2024_qual_2:
 yumsh_2024_final:
   $: $yumsh_2024 $yumsh_final
   date:
-    - moment: 19.01.2025
-      note: 4-6
     - moment: 15.12.2024
-      note: 7-11
+      note: 4-6 классы
+    - moment: 19.01.2025
+      note: 7-11 классы
 
 ##################################################
 
@@ -466,12 +462,16 @@ $matolimp_spb_2017:
 matolimp_spb_2017_qual:
   $: $matolimp_spb_2017 $matolimp_spb_qual
   date: 24.11.2017
-  solutions_url: http://matolimp-spb.org/static/landing_theme/docs/Otborochnyi_reshenia.pdf
+  solutions_url:
+    - url: http://matolimp-spb.org/static/landing_theme/docs/Otborochnyi_reshenia.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2017_final:
   $: $matolimp_spb_2017 $matolimp_spb_final
   date: 04.02.2018
-  solutions_url: https://drive.google.com/file/d/1ndUPRR6zG0qp1IIkg7WtFS_6wJRNnHa5/view?usp=sharing # это только условия
+  solutions_url:
+    - url: https://drive.google.com/file/d/1ndUPRR6zG0qp1IIkg7WtFS_6wJRNnHa5/view?usp=sharing
+      note: условия 1-4 классы
 
 
 $matolimp_spb_2018:
@@ -484,19 +484,24 @@ $matolimp_spb_2018:
 matolimp_spb_2018_qual:
   $: $matolimp_spb_2018 $matolimp_spb_qual
   date: 16.11.2018
-  solutions_url: http://matolimp-spb.org/static/landing_theme/docs/Reshenia_otborochnogo_tura.pdf
+  solutions_url:
+    - url: http://matolimp-spb.org/static/landing_theme/docs/Reshenia_otborochnogo_tura.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2018_final:
   $: $matolimp_spb_2018 $matolimp_spb_final
   date: 03.02.2019
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/static/landing_theme/docs/tasks_2019.pdf
-    # решения
-    - http://matolimp-spb.org/static/landing_theme/docs/1_2019_reshenie.pdf
-    - http://matolimp-spb.org/static/landing_theme/docs/2_2019_reshenie.pdf
-    - http://matolimp-spb.org/static/landing_theme/docs/3_2019_reshenie.pdf
-    - http://matolimp-spb.org/static/landing_theme/docs/4_2019_reshenie.pdf
+    - url: http://matolimp-spb.org/static/landing_theme/docs/tasks_2019.pdf
+      note: условия 1-4 классы
+    - url: http://matolimp-spb.org/static/landing_theme/docs/1_2019_reshenie.pdf
+      note: решения 1 класс
+    - url: http://matolimp-spb.org/static/landing_theme/docs/2_2019_reshenie.pdf
+      note: решения 2 класс
+    - url: http://matolimp-spb.org/static/landing_theme/docs/3_2019_reshenie.pdf
+      note: решения 3 класс
+    - url: http://matolimp-spb.org/static/landing_theme/docs/4_2019_reshenie.pdf
+      note: решения 4 класс
 
 
 $matolimp_spb_2019:
@@ -510,28 +515,37 @@ matolimp_spb_2019_qual:
   $: $matolimp_spb_2019 $matolimp_spb_qual
   date: 15.11.2019
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2019/11/29/1_klass_zadania_otborochnogo_tura.pdf
-    - http://matolimp-spb.org/media/uploads/2019/11/29/2_klass_zadania_otborochnogo_tura.pdf
-    - http://matolimp-spb.org/media/uploads/2019/11/29/3_klass_zadania_otborochnogo_tura.pdf
-    - http://matolimp-spb.org/media/uploads/2019/11/29/4_klass_zadania_otborochnogo_tura.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2019/11/29/otborochny_tur_zadania_s_resheniami_2020.pdf
+    - url: http://matolimp-spb.org/media/uploads/2019/11/29/1_klass_zadania_otborochnogo_tura.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2019/11/29/2_klass_zadania_otborochnogo_tura.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2019/11/29/3_klass_zadania_otborochnogo_tura.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2019/11/29/4_klass_zadania_otborochnogo_tura.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2019/11/29/otborochny_tur_zadania_s_resheniami_2020.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2019_final:
   $: $matolimp_spb_2019 $matolimp_spb_final
   date: 02.02.2020
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__1.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__2.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__3.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__4.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_1_CPQ45U0.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_2_8uACBjc.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_3.pdf
-    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_4.pdf
+    - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__1.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__2.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__3.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__4.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_1_CPQ45U0.pdf
+      note: решения 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_2_8uACBjc.pdf
+      note: решения 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_3.pdf
+      note: решения 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_4.pdf
+      note: решения 4 класс
 
 
 $matolimp_spb_2020:
@@ -544,19 +558,24 @@ $matolimp_spb_2020:
 matolimp_spb_2020_qual:
   $: $matolimp_spb_2020 $matolimp_spb_qual
   date: 13.11.2020
-  solutions_url: http://matolimp-spb.org/media/uploads/2021/01/07/1_tur_2021__reshenia_g3bSRPD.pdf
+  solutions_url:
+    - url: http://matolimp-spb.org/media/uploads/2021/01/07/1_tur_2021__reshenia_g3bSRPD.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2020_final:
   $: $matolimp_spb_2020 $matolimp_spb_final
   date: 07.02.2021
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_1kl.pdf
-    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_2kl.pdf
-    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_3kl.pdf
-    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_4kl.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2021/02/24/2_tur_2021__reshenia.pdf
+    - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_1kl.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_2kl.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_3kl.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_4kl.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2021/02/24/2_tur_2021__reshenia.pdf
+      note: решения 1-4 классы
 
 
 $matolimp_spb_2021:
@@ -570,19 +589,19 @@ matolimp_spb_2021_qual:
   $: $matolimp_spb_2021 $matolimp_spb_qual
   date: 12.11.2021
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2021/11/15/ottur_12_11_21.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2021/12/06/reshenia_otborochnogo_tura_12_11_21.pdf
+    - url: http://matolimp-spb.org/media/uploads/2021/11/15/ottur_12_11_21.pdf
+      note: условия 1-4 классы
+    - url: http://matolimp-spb.org/media/uploads/2021/12/06/reshenia_otborochnogo_tura_12_11_21.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2021_final:
   $: $matolimp_spb_2021 $matolimp_spb_final
   date: 03.04.2022
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2022/04/10/zadania2022.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2022/04/17/2_tur_2022__reshenia.pdf
+    - url: http://matolimp-spb.org/media/uploads/2022/04/10/zadania2022.pdf
+      note: условия 1-4 классы
+    - url: http://matolimp-spb.org/media/uploads/2022/04/17/2_tur_2022__reshenia.pdf
+      note: решения 1-4 классы
 
 
 
@@ -597,26 +616,32 @@ matolimp_spb_2022_qual:
   $: $matolimp_spb_2022 $matolimp_spb_qual
   date: 18.11.2022
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_1_1.pdf
-    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_2.pdf
-    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_3.pdf
-    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_4.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2022/12/15/reshenia_otborochnogo_tura_18_11_2022.pdf
+    - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_1_1.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_2.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_3.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_4.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2022/12/15/reshenia_otborochnogo_tura_18_11_2022.pdf
+      note: решения 1-4 классы
 
 
 matolimp_spb_2022_final:
   $: $matolimp_spb_2022 $matolimp_spb_final
   date: 19.02.2023
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2023/02/26/1_klass_zadania_osnovnogo_tura_2023.pdf
-    - http://matolimp-spb.org/media/uploads/2023/02/26/2_klass_zadania_osnovnogo_tura_2023.pdf
-    - http://matolimp-spb.org/media/uploads/2023/02/26/3_klass_zadania_osnovnogo_tura_2023.pdf
-    - http://matolimp-spb.org/media/uploads/2023/02/26/4_klass_zadania_osnovnogo_tura_2023.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2023/03/18/reshenia_zadach_osnovnogo_tura_2023.pdf
+    - url: http://matolimp-spb.org/media/uploads/2023/02/26/1_klass_zadania_osnovnogo_tura_2023.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/02/26/2_klass_zadania_osnovnogo_tura_2023.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/02/26/3_klass_zadania_osnovnogo_tura_2023.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/02/26/4_klass_zadania_osnovnogo_tura_2023.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/03/18/reshenia_zadach_osnovnogo_tura_2023.pdf
+      note: решения 1-4 класс
 
 
 
@@ -631,25 +656,31 @@ matolimp_spb_2023_qual:
   $: $matolimp_spb_2023 $matolimp_spb_qual
   date: 17.11.2023
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2023/11/22/1.pdf
-    - http://matolimp-spb.org/media/uploads/2023/11/22/2.pdf
-    - http://matolimp-spb.org/media/uploads/2023/11/22/3.pdf
-    - http://matolimp-spb.org/media/uploads/2023/11/22/4_Hin3Xw7.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2023/12/29/reshenia_otborochnogo_tura_17_11_2023.pdf
+    - url: http://matolimp-spb.org/media/uploads/2023/11/22/1.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/11/22/2.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/11/22/3.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/11/22/4_Hin3Xw7.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2023/12/29/reshenia_otborochnogo_tura_17_11_2023.pdf
+      note: решения 1-4 классы
 
 matolimp_spb_2023_final:
   $: $matolimp_spb_2023 $matolimp_spb_final
   date: 18.02.2024
   solutions_url:
-    # условия
-    - http://matolimp-spb.org/media/uploads/2024/03/01/1_klass_osnovnoy_tur_18_02_2024.pdf
-    - http://matolimp-spb.org/media/uploads/2024/03/01/2_klass_osnovnoy_tur_18_02_2024.pdf
-    - http://matolimp-spb.org/media/uploads/2024/03/01/3_klass_osnovnoy_tur_18_02_2024.pdf
-    - http://matolimp-spb.org/media/uploads/2024/03/01/4_klass_osnovnoy_tur_18_02_2024.pdf
-    # решения
-    - http://matolimp-spb.org/media/uploads/2024/03/10/2_tur_2024__reshenia.pdf
+    - url: http://matolimp-spb.org/media/uploads/2024/03/01/1_klass_osnovnoy_tur_18_02_2024.pdf
+      note: условия 1 класс
+    - url: http://matolimp-spb.org/media/uploads/2024/03/01/2_klass_osnovnoy_tur_18_02_2024.pdf
+      note: условия 2 класс
+    - url: http://matolimp-spb.org/media/uploads/2024/03/01/3_klass_osnovnoy_tur_18_02_2024.pdf
+      note: условия 3 класс
+    - url: http://matolimp-spb.org/media/uploads/2024/03/01/4_klass_osnovnoy_tur_18_02_2024.pdf
+      note: условия 4 класс
+    - url: http://matolimp-spb.org/media/uploads/2024/03/10/2_tur_2024__reshenia.pdf
+      note: решения 1-4 классы
 
 
 $matolimp_spb_2024:
@@ -838,7 +869,7 @@ $ustn_geom_mccme:
 ustn_geom_mccme_2024:
   $: $ustn_geom_mccme
   name_year: 2025
-  date: апрель 2025
+  date: 04.2025
 
 ##################################################
 
@@ -1372,7 +1403,7 @@ $bibn_qual:
   name_stage: отборочный этап
   stage: 1
   diff: 3
-  date: ноябрь, январь (но на разных площадках своё расписание)
+  date: ноябрь?
   format: online
 
 $bibn_final:
@@ -1381,7 +1412,7 @@ $bibn_final:
   stage: 2
   diff: 3
   rating: 3
-  date: ноябрь, январь (но на разных площадках своё расписание)
+  date: январь?
   format: offline
 
 
@@ -1514,7 +1545,7 @@ $mathbaby:
   solutions_url: https://mathbaby.ru/olympiads/archive
   diff: 3
   num_stages: 1
-  date: января-май
+  date: январь-май
   grades: 1-4
   format: offline
   other: 'Москва, Воронеж, Казань, Красноярск, Нижний Новгород, Новосибирск, Самара,
@@ -1679,7 +1710,7 @@ $femo_1:
   name_stage: этап 1/3
   stage: 1
   diff: 3
-  date: зимний, весенний, международный
+  date: зимний
   format: online
 
 $femo_2:
@@ -1687,14 +1718,14 @@ $femo_2:
   name_stage: этап 2/3
   stage: 2
   diff: 3
-  date: зимний, весенний, международный
+  date: весенний
 
 $femo_3:
   $: $femo
   name_stage: этап 3/3
   stage: 3
   diff: 3
-  date: зимний, весенний, международный
+  date: международный
   format: offline
 
 

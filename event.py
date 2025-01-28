@@ -6,6 +6,8 @@ import typing as t
 import collections.abc as t_abc
 import yaml
 from pathlib import Path
+import time
+import statistics
 
 from c3 import C
 
@@ -48,12 +50,15 @@ class RespItem:
     value: t.Any
     sort_key: t.Any | None
 
+
 no_value = RespItem('?', None)
+
 
 def html_link(url: str, title: str | None = None) -> str:
     if title is None:
         title = url
     return f'<a href="{url}">{title}</a>'
+
 
 class Event(NS):
 
@@ -71,6 +76,9 @@ class Event(NS):
         {
             'id': 'stage',
             'title': 'Этап',
+            'style': {
+                'width': '2ch',
+            }
         },
         {
             'id': 'url',
@@ -140,10 +148,28 @@ class Event(NS):
                 else no_value
             ),
             'url': html_link(self.url, title='=>') if self.url else no_value,
-            'grades': RespItem(dump_grades(self.grades), sort_key=sorted(self.grades)) if self.grades else no_value,
-            'diff': RespItem(self.diff * emoji_star, sort_key=self.diff) if self.diff is not junk else no_value,
-            'date': format_date(self.date) if self.date is not junk else no_value,
-            'rating': RespItem(self.rating * 'I' + ' ' + (4 - self.rating) * emoji_trophy, sort_key=self.rating) if self.rating else no_value,
+            'grades': (
+                RespItem(dump_grades(self.grades), sort_key=sorted(self.grades))
+                if self.grades
+                else no_value
+            ),
+            'diff': (
+                RespItem(self.diff * emoji_star, sort_key=self.diff)
+                if self.diff is not junk
+                else no_value
+            ),
+            'date': (
+                RespItem(format_date(self.date), sort_key=get_timestamp(self.date))
+                if self.date is not junk
+                else no_value
+            ),
+            'rating': (
+                RespItem(
+                    self.rating * 'I' + ' ' + (4 - self.rating) * emoji_trophy, sort_key=self.rating
+                )
+                if self.rating
+                else no_value
+            ),
             'format': (
                 {
                     'online': emoji_pc,
@@ -152,7 +178,9 @@ class Event(NS):
                 if self.format is not junk
                 else no_value
             ),
-            'solutions_url': html_link(self.solutions_url, title='=>') if self.solutions_url else no_value,
+            'solutions_url': (
+                format_solutions_url(self.solutions_url) if self.solutions_url else no_value
+            ),
             'raw': repr(self),
             'mro': repr([x.id for x in self.mro()]),
             'extra': format_dict(
@@ -186,6 +214,115 @@ class Event(NS):
         return res
 
 
+# %Y  Year with century as a decimal number.
+# %m  Month as a decimal number [01,12].
+# %d  Day of the month as a decimal number [01,31].
+# %H  Hour (24-hour clock) as a decimal number [00,23].
+# %M  Minute as a decimal number [00,59].
+# %S  Second as a decimal number [00,61].
+
+allowed_time_formats = [
+    '%H:%M %d.%m.%Y',
+    '%d.%m.%Y %H:%M',
+    '%d.%m.%Y',
+    '%m.%Y',
+    '%Y',
+]
+'''
+date: 2024
+date: 05.06.2024
+date:
+    start: 01.01.2025
+    end: 02.02.2025
+'''
+
+
+def format_date(d: t.Any) -> str:
+    match d:
+        case [*_]:
+            res = ''
+            for d in d:
+                res += f'{d["note"]}: {format_date(d)}'
+                res += '\n'
+            return res.strip()
+        case {'moment': moment}:
+            return moment
+        case {'start': start, 'end': end}:
+            return f'{start} - {end}'
+        case str():
+            return d
+        case _:
+            return repr(d)
+
+
+def get_timestamp(d: t.Any) -> float | None:
+    match d:
+        case [*_]:
+            return statistics.mean([get_timestamp(x) for x in d if get_timestamp(x)])
+        case {'moment': moment}:
+            return get_timestamp(moment)
+        case {'start': start, 'end': end}:
+            match get_timestamp(start), get_timestamp(end):
+                case None, None:
+                    return None
+                case None, f:
+                    return f
+                case f, None:
+                    return f
+                case f1, f2:
+                    return (f1 + f2) / 2
+
+        case int():
+            return get_timestamp(str(d))
+
+        case float():
+            return get_timestamp(str(d)) or get_timestamp('0' + str(d))
+
+        case str():
+            d = d.strip()
+            if '-' in d:
+                start, _, end = d.partition('-')
+                return get_timestamp(
+                    {
+                        'start': start.strip(),
+                        'end': end.strip(),
+                    }
+                )
+
+            for fmt in allowed_time_formats:
+                try:
+                    return time.mktime(time.strptime(d, fmt))
+                except ValueError:
+                    pass
+            print(f'failed to parse date {d}')
+            return None
+        case _:
+            return None
+
+
+def format_solutions_url(d: t.Any) -> str:
+    match d:
+        case str():
+            return html_link(d, '=>')
+        case [*_]:
+            return '\n'.join(
+                (
+                    html_link(
+                        x['url'],
+                        x['note'],
+                    )
+                    if isinstance(x, dict)
+                    else html_link(
+                        x,
+                        f'{i}=>',
+                    )
+                )
+                for i, x in enumerate(d)
+            )
+        case _:
+            return repr(d)
+
+
 def parse_grades(s: str) -> set[int]:
     s = str(s)
 
@@ -204,16 +341,6 @@ def dump_grades(s: set[int]) -> str:
 
 def format_dict(self) -> str:
     return '\n'.join(f'{k}: {v}' for k, v in self.items())
-
-
-def format_date(d: t.Any) -> str:
-    match d:
-        case {'start': start, 'end': end}:
-            return f'{start} - {end}'
-        case str():
-            return d
-        case _:
-            return repr(d)
 
 
 def collapse_numbers_into_ranges(nums: t_abc.Iterable[int]) -> t_abc.Iterator[list[int]]:

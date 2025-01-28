@@ -71,18 +71,29 @@ vseros_2024_1:
   date:
     - start: 16.10.2024
       end: 18.10.2024
-      note: 4-6
+      note: 4-6 классы
     - moment: 15.10.2024
-      note: 7-11
+      note: 7-11 классы
 
 vseros_2024_2:
   $: $vseros_2 $vseros_2024
-  # date: конец ноября 2024
+  date:
+    - moment: 04.12.2024
+      note: 7-8 классы
+    - moment: 05.12.2024
+      note: 9 класс
+    - moment: 06.12.2024
+      note: 10-11 классы
 
 vseros_2024_3:
   $: $vseros_3 $vseros_2024
-  # date: конец января 2025
+  date:
+    - moment: 31.01.2025
+      note: 1 day
+    - moment: 01.02.2025
+      note: 2 day
 
 vseros_2024_4:
   $: $vseros_4 $vseros_2024
-  # date: апрель 2025
+  date: 16.04.2025 - 22.04.2025
+

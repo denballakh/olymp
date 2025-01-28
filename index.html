@@ -29,15 +29,18 @@
             color: #9fa6c4; /* Muted color for visited links */
         }
         table {
+            white-space: pre-line;
             border-collapse: collapse;
             width: 100%;
             margin: 20px 0;
         }
         th, td {
-            background-color: #2d2d3a;
             border: 1px solid #444;
-            padding: 8px;
+            padding: 4px;
             text-align: left;
+        }
+        th {
+            background-color: #555555;
         }
         th.sortable {
             cursor: pointer;
@@ -45,6 +48,9 @@
         }
         tr:nth-child(even) {
             background-color: #2a2a38;
+        }
+        tr:nth-child(odd) {
+            background-color: #2d2d3a;
         }
         tr:hover {
             background-color: #3a3a4a;
@@ -112,14 +118,14 @@ document.getElementById('grade_selection').addEventListener(
 
 function update_table() {
     const tbody = document.querySelector("#dataTable tbody");
-    tbody.innerHTML = ""; // deletes childs?
+    tbody.innerHTML = "";
     data.forEach(row => {
         if (!show_meta && row.is_meta.value) return;
-        console.log(0 - - grade_selection);
-        console.log(row.grades.sort_key);
-        console.log(row.grades.sort_key.indexOf(grade_selection));
+        // console.log(0 - - grade_selection);
+        // console.log(row.grades.sort_key);
+        // console.log(row.grades.sort_key.indexOf(grade_selection));
         if ((grade_selection != 0) && (row.grades.sort_key === null || row.grades.sort_key.indexOf(0 - - grade_selection) == -1)) return;
-        console.log(row.grades)
+        // console.log(row.grades)
         const tr = document.createElement("tr");
         tr.dataset.id = row.id.value;
         for (const column of columns) {
@@ -172,6 +178,24 @@ function create_table_header() {
         }
         tableHeader.appendChild(th);
     }
+
+    const style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = "";
+    for (const [index, column] of columns.entries()) {
+        if (!column.style) continue;
+        console.log(column)
+
+        if (column.style.width)
+            style.innerHTML += `
+                th:nth-child(${index + 1}),
+                td:nth-child(${index + 1}) {
+                    width: ${column.style.width};
+                }
+            `;
+
+    }
+    document.head.appendChild(style); // Add the style element to the head
 }
 
 async function initialize() {
