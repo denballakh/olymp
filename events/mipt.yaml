@@ -1,0 +1,56 @@
+$mipt:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада школьников «Физтех»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp-online.mipt.ru/
+  solutions_url: https://olymp-online.mipt.ru/page/primery-zadanij
+  grades: 9-11
+  num_stages: 2
+
+
+$mipt_qual:
+  $: $mipt
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: октябрь-ноябрь
+  format: online
+
+$mipt_final:
+  $: $mipt
+  name_stage: финальный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: февраль
+  format: offline
+
+
+
+$mipt_2024:
+  $: $mipt
+  name_year: 2024-2025
+  url: https://olymp-online.mipt.ru/event/375
+  date: 2024-2025
+
+mipt_2024_qual_1:
+  $: $mipt_qual $mipt_2024
+  date: 13.10.2024 10:00
+
+mipt_2024_qual_2:
+  $: $mipt_qual $mipt_2024
+  date: 27.10.2024 8:00
+
+mipt_2024_qual_3:
+  $: $mipt_qual $mipt_2024
+  grades: 11
+  date: 03.11.2024 10:00
+
+mipt_2024_final:
+  $: $mipt_final $mipt_2024
+  date: 16.02.2025
+
+
+
+

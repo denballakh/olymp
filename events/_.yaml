@@ -1,0 +1,56 @@
+
+_:
+  name: some name
+  url: https://example.com/
+  solutions_url: https://example.com/solutions/
+  date: 01.02.2003
+  diff: 5
+  stage: 7
+  num_stages: 10
+  grades: 5-15
+  rating: 2
+  format: online
+
+
+$XXX:
+  name_0: Олимпиада XXX
+  url: https://XXX.ru/
+  solutions_url: https://XXX.ru/ru/about/archive
+  num_stages: 2
+  grades: 8-11
+
+$XXX_qual:
+  $: $XXX
+  name_1: отборочный этап
+  stage: 1
+  diff: 1
+  date: <месяц проведения>
+  format: online
+
+$XXX_final:
+  $: $XXX
+  name_1: заключительный этап
+  stage: 2
+  diff: 2
+  rating: 3
+  date: <месяц проведения>
+  format: offline
+
+
+$XXX_2024:
+  $: $XXX
+  name_2: 2024-2025
+  date: 2024-2025
+
+XXX_2024_qual:
+  $: $XXX_2024 $XXX_qual
+  date: <конкретная дата>
+
+XXX_2024_final:
+  $: $XXX_2024 $XXX_final
+  date: <конкретная дата>
+
+
+\n  name_0: (.+)\n
+\n  name: '{name_main} {name_year}, {name_stage}'\n  name_main: \1\n  name_year: <год>\n  name_stage: <этап>\n
+

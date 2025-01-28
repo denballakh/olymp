@@ -1,0 +1,88 @@
+$vseros:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Всероссийская олимпиада школьников
+  name_year: <год>
+  name_stage: <этап>
+  url: https://vos.olimpiada.ru/
+  num_stages: 4
+  solutions_url: https://olympiads.mccme.ru/vmo/
+
+$vseros_0:
+  $: $vseros
+  name_stage: пригласительный этап
+  diff: 1
+  grades: 4-11
+  stage: 0
+  date: '?'
+  format: online
+
+$vseros_1:
+  $: $vseros
+  name_stage: школьный этап
+  diff: 1
+  grades: 4-11
+  stage: 1
+  date: середина октября
+  format: mixed
+
+$vseros_2:
+  $: $vseros
+  name_stage: муниципальный этап
+  diff: 1
+  grades: 4-11
+  stage: 2
+  date: конец ноября
+  format: offline
+
+$vseros_3:
+  $: $vseros
+  name_stage: региональный этап
+  diff: 3
+  grades: 9-11
+  stage: 3
+  date: конец января
+  format: offline
+
+$vseros_4:
+  $: $vseros
+  name_stage: всероссийский этап
+  diff: 5
+  grades: 9-11
+  stage: 4
+  date: апрель
+  format: offline
+
+$vseros_5:
+  $: $vseros
+  name_stage: международный этап
+  diff: 5
+  grades: 9-11
+  stage: 5
+  format: offline
+
+
+
+$vseros_2024:
+  $: $vseros
+  name_year: 2024-2025
+
+vseros_2024_1:
+  $: $vseros_1 $vseros_2024
+  date:
+    - start: 16.10.2024
+      end: 18.10.2024
+      note: 4-6
+    - moment: 15.10.2024
+      note: 7-11
+
+vseros_2024_2:
+  $: $vseros_2 $vseros_2024
+  # date: конец ноября 2024
+
+vseros_2024_3:
+  $: $vseros_3 $vseros_2024
+  # date: конец января 2025
+
+vseros_2024_4:
+  $: $vseros_4 $vseros_2024
+  # date: апрель 2025

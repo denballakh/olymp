@@ -1,0 +1,70 @@
+$systematika:
+  $: $$math
+  name: '{name_num} {name_main}, {name_stage}'
+  name_num: <номер>
+  name_main: Олимипиада Систематики
+  name_stage: <этап>
+  url: https://systematika.org/olimpiada/
+  solutions_url: https://systematika.org/olimpiada/tasks
+  num_stages: 2
+  grades: 1-9
+  format: online
+  other: '
+    Обязательно'
+
+$systematika_qual:
+  $: $systematika
+  name_stage: 1-й тур
+  diff: 1
+  stage: 1
+
+$systematika_final:
+  $: $systematika
+  name_stage: 2-й тур
+  diff: 3
+  stage: 2
+
+
+
+$systematika_15:
+  $: $systematika
+  name_num: 15
+
+systematika_15_qual:
+  $: $systematika_qual $systematika_15
+  date:
+    start: 15.01.2024
+    end: 06.02.2024
+
+systematika_15_final:
+  $: $systematika_final $systematika_15
+  date: 25.02.2024
+
+
+$systematika_16:
+  $: $systematika
+  name_num: 16
+
+systematika_16_qual:
+  $: $systematika_qual $systematika_16
+  date:
+    start: 25.09.2024
+    end: 06.10.2024
+
+systematika_16_final:
+  $: $systematika_final $systematika_16
+  date: 27.10.2024
+
+$systematika_17:
+  $: $systematika
+  name_num: 17
+
+systematika_17_qual:
+  $: $systematika_qual $systematika_17
+  date:
+    start: 21.01.2025
+    end: 03.02.2025
+
+systematika_17_final:
+  $: $systematika_final $systematika_17
+  date: 02.03.2025

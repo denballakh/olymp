@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Табличка с олимпиадами</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #e5e5e5;
+            font-family: monospace;
+        }
+        a {
+            color: #4dabf7; /* Soft blue color for links */
+            text-decoration: none; /* Remove underline by default */
+            font-weight: 500; /* Make links slightly bold */
+        }
+
+        a:hover {
+            color: #82caff; /* Brighter blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        a:active {
+            color: #339af0; /* Darker blue for active state */
+        }
+
+        a:visited {
+            color: #9fa6c4; /* Muted color for visited links */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            background-color: #2d2d3a;
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th.sortable {
+            cursor: pointer;
+            color: #aaffff;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a38;
+        }
+        tr:hover {
+            background-color: #3a3a4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>⭐ Табличка с олимпиадами</h1>
+    <input type="checkbox" id="chk_show_meta"> показывать мета-события
+    <table id="dataTable">
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+<script>
+
+let sortDirection = {};
+let data;
+let columns;
+let columns_map = {};
+let show_meta = false;
+
+document.getElementById('chk_show_meta').addEventListener(
+    'change',
+    function () {
+        show_meta = this.checked;
+        update_table();
+    }
+);
+
+
+function update_table() {
+    const tbody = document.querySelector("#dataTable tbody");
+    tbody.innerHTML = ""; // deletes childs?
+    data.forEach(row => {
+        if (!show_meta && row.is_meta.value) return;
+        const tr = document.createElement("tr");
+        tr.dataset.id = row.id.value;
+        for (const column of columns) {
+            if (!column.visible) continue;
+
+            const td = document.createElement("td");
+
+            if (column.html) {
+                td.innerHTML = row[column.id].value;
+            } else {
+                td.textContent = row[column.id].value;
+            }
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    });
+}
+
+function sort_table_by_column(id) {
+    const direction = sortDirection[id] === 'asc' ? 'desc' : 'asc';
+    sortDirection[id] = direction;
+
+    data.sort((a, b) => {
+        let a_key, b_key;
+        a_key = a[id].sort_key;
+        b_key = b[id].sort_key;
+        if (a_key === null) return +1;
+        if (b_key === null) return -1;
+        return direction === "asc"
+            ? a_key < b_key ? -1 : a_key > b_key ? +1 : 0
+            : a_key < b_key ? +1 : a_key > b_key ? -1 : 0
+
+    })
+    update_table();
+
+}
+
+
+function create_table_header() {
+    const tableHeader = document.getElementById("tableHeader");
+    for (const column of columns) {
+        if (!column.visible) continue;
+
+        const th = document.createElement("th");
+        th.textContent = column.title;
+        th.dataset.column = column.id;
+
+        if (column.sortable) {
+            th.addEventListener("click", () => sort_table_by_column(column.id));
+            th.classList.add("sortable");
+        }
+        tableHeader.appendChild(th);
+    }
+}
+
+async function initialize() {
+    columns = await (await fetch('/columns')).json();
+    for (const column of columns) {
+        columns_map[column.id] = column;
+    }
+    console.log(columns_map)
+    data = await (await fetch('/data.json')).json();
+
+    create_table_header(columns);
+    update_table(data, columns);
+}
+
+initialize();
+
+</script>
+</body>
+</html>

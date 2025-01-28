@@ -1,0 +1,2208 @@
+
+$lomonosov:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Ломоносов
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp.msu.ru/
+  solutions_url: https://olymp.msu.ru/rus/page/main/29/page/olimpiady-proshlyh-let
+  num_stages: 2
+  grades: 1-11
+  other: 'очно/заочно
+
+    Москва
+
+    МГУ
+
+    Регистрация открыта, нет информации об олимпиаде по математике в 2024 году.
+
+    Обязательно'
+
+$lomonosov_qual:
+  $: $lomonosov
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  format: online
+  date:
+    start: октябрь
+    end: декабрь
+$lomonosov_final:
+  $: $lomonosov
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  format: offline
+  date:
+    start: февраль
+    end: март
+
+$lomonosov_2024:
+  $: $lomonosov
+  name_year: 2024-2025
+  date: 2024-2025
+lomonosov_2024_qual:
+  $: $lomonosov_2024 $lomonosov_qual
+  date:
+    start: октябрь 2024
+    end: декабрь 2024
+lomonosov_2024_final:
+  $: $lomonosov_2024 $lomonosov_final
+  date:
+    start: февраль 2025
+    end: март 2025
+
+##################################################
+
+$vsesib:
+  name: Всесибирская открытая олимпиада школьников по математике
+  url: https://sesc.nsu.ru/olymp-vsesib/sections/maths/
+  solutions_url: 'https://sesc.nsu.ru/olymp-vsesib/sections/maths/
+
+    В конце страницы по каждому предмету есть архив'
+  num_stages: 2
+  grades: 7-11
+  other: 'очно
+
+    РФ: Воронеж, Екатеринбург, Казань, Краснодар, Красноярск, Новосибирск, Москва,
+    Омск,  Уфа; Узбекистан:Ташкент.
+
+    очная, по площадкам (может, можно открыть где-то у себя)
+
+    начало регистрации 25.09.24 https://vsesib.nsu.ru/personal/
+
+    Обязательно'
+
+$vsesib_qual:
+  $: $vsesib
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  format: online
+  date: октябрь
+$vsesib_final:
+  $: $vsesib
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 2
+  format: offline
+  date: февраль
+
+$vsesib_2024:
+  $: $vsesib
+  name_year: 2024-2025
+  date: 2024-2025
+vsesib_2024_qual:
+  $: $vsesib_2024 $vsesib_qual
+  date: 20.10.2024
+vsesib_2024_final:
+  $: $vsesib_2024 $vsesib_final
+  date: 16.02.2025
+
+##################################################
+
+
+$kurchatov:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Курчатов
+  name_year: <год>
+  name_stage: <этап>
+  url: http://olimpiadakurchatov.ru/
+  solutions_url: https://olimpiadakurchatov.ru/archive
+  num_stages: 2
+  grades: 6-11
+  other: 'Москва, Уфа, Казань, Краснодарский край, Красноярск, Волгоград, Воронеж,
+    Калининград, Нижний Новгород, Новосибирск, Самара, Екатеренбург, Санкт-Петербург
+
+    Регистрация через личный кабинет по ссылке: https://reg.olimpiada.ru/login/register
+
+    Обязательно'
+
+$kurchatov_qual:
+  $: $kurchatov
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: январь
+  format: online
+
+$kurchatov_final:
+  $: $kurchatov
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: март
+  format: offline
+
+
+$kurchatov_2024:
+  $: $kurchatov
+  name_year: 2024-2025
+  date: 2024-2025
+
+kurchatov_2024_qual:
+  $: $kurchatov_2024 $kurchatov_qual
+
+kurchatov_2024_final:
+  $: $kurchatov_2024 $kurchatov_final
+
+##################################################
+
+$pdmi_ras:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Санкт-Петербургская олимпиада школьников по математике
+  name_year: <год>
+  name_stage: <этап>
+  url: http://www.pdmi.ras.ru/~olymp/index.html
+  solutions_url: http://www.pdmi.ras.ru/~olymp/index.html
+  num_stages: 2
+  grades: 6-11
+  format: offline
+  other: 'Санкт-Петербург
+
+    очно, Санкт-Петербург
+
+    Обязательно'
+
+$pdmi_ras_qual:
+  $: $pdmi_ras
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: начало зимы
+
+$pdmi_ras_final:
+  $: $pdmi_ras
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: конец зимы
+
+
+$pdmi_ras_2024:
+  $: $pdmi_ras
+  name_year: 2024-2025
+  date: 2024-2025
+
+pdmi_ras_2024_qual:
+  $: $pdmi_ras_2024 $pdmi_ras_qual
+
+pdmi_ras_2024_final:
+  $: $pdmi_ras_2024 $pdmi_ras_final
+
+##################################################
+
+$yumsh:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада ЮМШ
+  name_year: <год>
+  name_stage: <этап>
+  url: http://yumsh.ru/cms/yumsh-olymp
+  solutions_url: https://yumsh.ru/cms/yumsh-olymp/archive
+  num_stages: 2
+  grades: 4-11
+  other: 'Санкт-Петербург
+
+    Один-два дистанционных отборочных, очный заключительный в Санкт-Петербурге
+
+    Предварительная регистрация не требуется.
+
+    Обязательно'
+
+$yumsh_qual:
+  $: $yumsh
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: сентябрь-октябрь
+  format: online
+
+$yumsh_final:
+  $: $yumsh
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 2
+  date: декабрь-январь
+  format: offline
+
+
+$yumsh_2024:
+  $: $yumsh
+  name_year: 2024-2025
+  date: 2024-2025
+
+yumsh_2024_qual_1:
+  $: $yumsh_2024 $yumsh_qual
+  date: 15.09.2024
+
+yumsh_2024_qual_2:
+  $: $yumsh_2024 $yumsh_qual
+  date: 05.10.2024
+
+yumsh_2024_final:
+  $: $yumsh_2024 $yumsh_final
+  date:
+    - moment: 19.01.2025
+      note: 4-6
+    - moment: 15.12.2024
+      note: 7-11
+
+##################################################
+
+$hse:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада «Высшая проба»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp.hse.ru/mmo/math
+  solutions_url: https://olymp.hse.ru/mmo/tasks-math
+  num_stages: 2
+  grades: 7-11
+  other: "очно/заочно \nОтборочный этап проходит в заочной форме в режиме онлайн-тестирования.\
+    \ Заключительный этап проводится в очной форме в городах РФ и СНГ.\nhttps://olymp.hse.ru/mmo/reg\
+    \ до 05.11.2024\nОбязательно"
+
+$hse_qual:
+  $: $hse
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: ноябрь
+  format: online
+
+$hse_final:
+  $: $hse
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: февраль
+  format: offline
+
+
+$hse_2024:
+  $: $hse
+  name_year: 2024-2025
+  date: 2024-2025
+
+hse_2024_qual:
+  $: $hse_qual $hse_2024
+
+hse_2024_final:
+  $: $hse_final $hse_2024
+
+##################################################
+
+$arhimedes:
+  name: '{name_main} {name_year}'
+  name_main: Зимний Турнир Архимеда
+  name_year: <год>
+  url: http://www.arhimedes.org/index.php?id=zima
+  solutions_url: справа на сайте находятся ссылки
+  diff: 5
+  num_stages: 1
+  date: январь
+  grades: 6-7
+  format: offline
+  other: 'Россия: Москва, Санкт-Петербург, Нижний Новгород, Воронеж, Уфа,Казань, Челябинск;
+    Беларусь: Минск; Казахстан: Астана, Алматы; Грузия: Тбилиси
+
+    очно в Москве и на площадках
+
+    Обязательно'
+
+arhimedes_2024:
+  $: $arhimedes
+  name_year: 2024
+  date: 2024-2025
+
+##################################################
+
+$spbu:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада СПбГУ
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olympiada.spbu.ru/predmety/2-uncategorised/4-matematika.html
+  solutions_url: https://olympiada.spbu.ru/arkhiv.html
+  num_stages: 2
+  grades: 6-11
+  other: 'Санкт-Петербург
+
+    отборочный онлайн, заключительный очно в Санкт-Петербург,
+
+    https://olymp.spbu.ru/
+
+    Вход в личный кабинет
+
+    Обязательно'
+
+$spbu_qual:
+  $: $spbu
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: октябрь
+  format: online
+
+$spbu_final:
+  $: $spbu
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: апрель
+  format: offline
+
+
+$spbu_2024:
+  $: $spbu
+  name_year: 2024-2025
+  date: 2024-2025
+
+spbu_2024_qual:
+  $: $spbu_2024 $spbu_qual
+
+spbu_2024_final:
+  $: $spbu_2024 $spbu_final
+
+##################################################
+
+$pvg:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Покори Воробьёвы горы!
+  name_year: <год>
+  name_stage: <этап>
+  url: https://pvg.mk.ru/news/
+  solutions_url: https://pvg.mk.ru/archive/archive/
+  num_stages: 2
+  grades: 5-11
+  other: 'Москва
+
+    отборочный - онлайн, заключительный - в Москве
+
+    Дополнително'
+
+$pvg_qual:
+  $: $pvg
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: январь
+  format: online
+
+$pvg_final:
+  $: $pvg
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 1
+  date: апрель
+  format: offline
+
+
+$pvg_2024:
+  $: $pvg
+  name_year: 2024-2025
+  date: 2024-2025
+
+pvg_2024_qual:
+  $: $pvg_2024 $pvg_qual
+
+pvg_2024_final:
+  $: $pvg_2024 $pvg_final
+
+##################################################
+
+$matolimp_spb:
+  name: '{name_num} {name_main} {name_year}, {name_stage}'
+  name_num: <номер>
+  name_main: Санкт-Петербургская математическая олимпиада начальной школы
+  name_year: <год>
+  name_stage: <этап>
+  url: http://matolimp-spb.org/
+  solutions_url: http://matolimp-spb.org/
+  num_stages: 2
+  grades: 1-4
+  format: offline
+  other: 'Санкт-Петербург
+
+    очно, Санкт-петербург
+
+    http://matolimp-spb.org/register/
+
+    Можно подать заявку на участие в следующей олимпиаде
+
+    Дополнително'
+
+$matolimp_spb_qual:
+  $: $matolimp_spb
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: ноябрь
+
+$matolimp_spb_final:
+  $: $matolimp_spb
+  name_stage: основной этап
+  stage: 2
+  diff: 5
+  date: февраль
+
+
+
+$matolimp_spb_2017:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2018/
+  name_num: IV
+  name_year: 2018
+  date: 2017-2018
+
+matolimp_spb_2017_qual:
+  $: $matolimp_spb_2017 $matolimp_spb_qual
+  date: 24.11.2017
+  solutions_url: http://matolimp-spb.org/static/landing_theme/docs/Otborochnyi_reshenia.pdf
+
+matolimp_spb_2017_final:
+  $: $matolimp_spb_2017 $matolimp_spb_final
+  date: 04.02.2018
+  solutions_url: https://drive.google.com/file/d/1ndUPRR6zG0qp1IIkg7WtFS_6wJRNnHa5/view?usp=sharing # это только условия
+
+
+$matolimp_spb_2018:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2019/
+  name_num: V
+  name_year: 2019
+  date: 2018-2019
+
+matolimp_spb_2018_qual:
+  $: $matolimp_spb_2018 $matolimp_spb_qual
+  date: 16.11.2018
+  solutions_url: http://matolimp-spb.org/static/landing_theme/docs/Reshenia_otborochnogo_tura.pdf
+
+matolimp_spb_2018_final:
+  $: $matolimp_spb_2018 $matolimp_spb_final
+  date: 03.02.2019
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/static/landing_theme/docs/tasks_2019.pdf
+    # решения
+    - http://matolimp-spb.org/static/landing_theme/docs/1_2019_reshenie.pdf
+    - http://matolimp-spb.org/static/landing_theme/docs/2_2019_reshenie.pdf
+    - http://matolimp-spb.org/static/landing_theme/docs/3_2019_reshenie.pdf
+    - http://matolimp-spb.org/static/landing_theme/docs/4_2019_reshenie.pdf
+
+
+$matolimp_spb_2019:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2020/
+  name_num: VI
+  name_year: 2020
+  date: 2019-2020
+
+matolimp_spb_2019_qual:
+  $: $matolimp_spb_2019 $matolimp_spb_qual
+  date: 15.11.2019
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2019/11/29/1_klass_zadania_otborochnogo_tura.pdf
+    - http://matolimp-spb.org/media/uploads/2019/11/29/2_klass_zadania_otborochnogo_tura.pdf
+    - http://matolimp-spb.org/media/uploads/2019/11/29/3_klass_zadania_otborochnogo_tura.pdf
+    - http://matolimp-spb.org/media/uploads/2019/11/29/4_klass_zadania_otborochnogo_tura.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2019/11/29/otborochny_tur_zadania_s_resheniami_2020.pdf
+
+matolimp_spb_2019_final:
+  $: $matolimp_spb_2019 $matolimp_spb_final
+  date: 02.02.2020
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__1.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__2.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__3.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__4.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_1_CPQ45U0.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_2_8uACBjc.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_3.pdf
+    - http://matolimp-spb.org/media/uploads/2020/02/16/2_tur_2020_s_resheniami_4.pdf
+
+
+$matolimp_spb_2020:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2021/
+  name_num: VII
+  name_year: 2021
+  date: 2020-2021
+
+matolimp_spb_2020_qual:
+  $: $matolimp_spb_2020 $matolimp_spb_qual
+  date: 13.11.2020
+  solutions_url: http://matolimp-spb.org/media/uploads/2021/01/07/1_tur_2021__reshenia_g3bSRPD.pdf
+
+matolimp_spb_2020_final:
+  $: $matolimp_spb_2020 $matolimp_spb_final
+  date: 07.02.2021
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_1kl.pdf
+    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_2kl.pdf
+    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_3kl.pdf
+    - http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_4kl.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2021/02/24/2_tur_2021__reshenia.pdf
+
+
+$matolimp_spb_2021:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2022/
+  name_num: VIII
+  name_year: 2022
+  date: 2021-2022
+
+matolimp_spb_2021_qual:
+  $: $matolimp_spb_2021 $matolimp_spb_qual
+  date: 12.11.2021
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2021/11/15/ottur_12_11_21.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2021/12/06/reshenia_otborochnogo_tura_12_11_21.pdf
+
+matolimp_spb_2021_final:
+  $: $matolimp_spb_2021 $matolimp_spb_final
+  date: 03.04.2022
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2022/04/10/zadania2022.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2022/04/17/2_tur_2022__reshenia.pdf
+
+
+
+$matolimp_spb_2022:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2023/
+  name_num: IX
+  name_year: 2023
+  date: 2022-2023
+
+matolimp_spb_2022_qual:
+  $: $matolimp_spb_2022 $matolimp_spb_qual
+  date: 18.11.2022
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_1_1.pdf
+    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_2.pdf
+    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_3.pdf
+    - http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_4.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2022/12/15/reshenia_otborochnogo_tura_18_11_2022.pdf
+
+
+matolimp_spb_2022_final:
+  $: $matolimp_spb_2022 $matolimp_spb_final
+  date: 19.02.2023
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2023/02/26/1_klass_zadania_osnovnogo_tura_2023.pdf
+    - http://matolimp-spb.org/media/uploads/2023/02/26/2_klass_zadania_osnovnogo_tura_2023.pdf
+    - http://matolimp-spb.org/media/uploads/2023/02/26/3_klass_zadania_osnovnogo_tura_2023.pdf
+    - http://matolimp-spb.org/media/uploads/2023/02/26/4_klass_zadania_osnovnogo_tura_2023.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2023/03/18/reshenia_zadach_osnovnogo_tura_2023.pdf
+
+
+
+$matolimp_spb_2023:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2024/
+  name_num: X
+  name_year: 2024
+  date: 2023-2024
+
+matolimp_spb_2023_qual:
+  $: $matolimp_spb_2023 $matolimp_spb_qual
+  date: 17.11.2023
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2023/11/22/1.pdf
+    - http://matolimp-spb.org/media/uploads/2023/11/22/2.pdf
+    - http://matolimp-spb.org/media/uploads/2023/11/22/3.pdf
+    - http://matolimp-spb.org/media/uploads/2023/11/22/4_Hin3Xw7.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2023/12/29/reshenia_otborochnogo_tura_17_11_2023.pdf
+
+matolimp_spb_2023_final:
+  $: $matolimp_spb_2023 $matolimp_spb_final
+  date: 18.02.2024
+  solutions_url:
+    # условия
+    - http://matolimp-spb.org/media/uploads/2024/03/01/1_klass_osnovnoy_tur_18_02_2024.pdf
+    - http://matolimp-spb.org/media/uploads/2024/03/01/2_klass_osnovnoy_tur_18_02_2024.pdf
+    - http://matolimp-spb.org/media/uploads/2024/03/01/3_klass_osnovnoy_tur_18_02_2024.pdf
+    - http://matolimp-spb.org/media/uploads/2024/03/01/4_klass_osnovnoy_tur_18_02_2024.pdf
+    # решения
+    - http://matolimp-spb.org/media/uploads/2024/03/10/2_tur_2024__reshenia.pdf
+
+
+$matolimp_spb_2024:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2025/
+  name_num: XI
+  name_year: 2025
+  date: 2024-2025
+
+matolimp_spb_2024_qual:
+  $: $matolimp_spb_2024 $matolimp_spb_qual
+  date: 15.11.2024
+
+matolimp_spb_2024_final:
+  $: $matolimp_spb_2024 $matolimp_spb_final
+  date: 16.02.2025
+
+##################################################
+
+$mmo_mccme:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Московская математическая олимпиада
+  name_year: <год>
+  name_stage: <этап>
+  url: https://mmo.mccme.ru/
+  solutions_url: 'https://mmo.mccme.ru/2024/
+
+    Ссылки на предудущие годы находятся на главной странице'
+  diff: 5
+  num_stages: 2
+  grades: 8-11
+  other: "онлайн/Москва\nдля 8-10 -1 тур онлайн, для 11 кл. 2 тура: отборочный онлайн,\
+    \ заключительный в Москве, в зданиях МГУ на Воробьевых горах\nРегистрация участника\
+    \ олимпиады\nhttps://reg.cpm.moscow/login/register \nДополнително"
+
+$mmo_mccme_qual:
+  $: $mmo_mccme
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: январь
+
+$mmo_mccme_final:
+  $: $mmo_mccme
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  grades: 11
+  date: март
+
+
+$mmo_mccme_2024:
+  $: $mmo_mccme
+  name_year: 2024-2025
+  date: 2024-2025
+
+mmo_mccme_2024_qual:
+  $: $mmo_mccme_2024 $mmo_mccme_qual
+
+mmo_mccme_2024_final:
+  $: $mmo_mccme_2024 $mmo_mccme_final
+
+##################################################
+
+$tiim:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада «ТИИМ – Технологии. Интеллект. Информатика. Математика»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://xn--h1aamv.xn--p1ai/
+  solutions_url: https://xn--h1aamv.xn--p1ai/tiim2021/, https://xn--h1aamv.xn--p1ai/tiim2022/,https://xn--h1aamv.xn--p1ai/tiim2023/
+  num_stages: 2
+  grades: 5-11
+  other: 'Москва, Самара, Омск, Нижний Новгород
+
+    заочно и очно
+
+    https://xn--h1aamv.xn--p1ai/personal/register/?register=yes&backurl=%2Fpersonal%2F
+
+    Личный кабинет участника
+
+    Дополнително'
+
+$tiim_qual:
+  $: $tiim
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: ноябрь
+  format: online
+
+$tiim_final:
+  $: $tiim
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  date: февраль
+  format: offline
+
+
+$tiim_2024:
+  $: $tiim
+  name_year: 2024-2025
+  date: 2024-2025
+
+tiim_2024_qual:
+  $: $tiim_2024 $tiim_qual
+
+tiim_2024_final:
+  $: $tiim_2024 $tiim_final
+
+##################################################
+
+$sp_urfu:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Вузовско-академическая олимпиада
+  name_year: <год>
+  name_stage: <этап>
+  url: https://sp.urfu.ru/vuzakadem/matem/2024/
+  solutions_url: https://sp.urfu.ru/vuzakadem/matem/2024/old_statements.html
+  num_stages: 2
+  grades: 5-11
+  other: 'Екатеринбург
+
+    заочно и очно, Екатеринбург
+
+    https://sp.urfu.ru/junior-summer/2024/index.html
+
+    Не совсем понятно правда, подходит нам или нет
+
+    Дополнително'
+
+$sp_urfu_qual:
+  $: $sp_urfu
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: январь
+  format: online
+
+$sp_urfu_final:
+  $: $sp_urfu
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  date: февраль
+  format: offline
+
+
+$sp_urfu_2024:
+  $: $sp_urfu
+  name_year: 2024-2025
+  date: 2024-2025
+
+sp_urfu_2024_qual:
+  $: $sp_urfu_2024 $sp_urfu_qual
+
+sp_urfu_2024_final:
+  $: $sp_urfu_2024 $sp_urfu_final
+
+##################################################
+
+$ustn_geom_mccme:
+  name: '{name_main} {name_year}'
+  name_main: Устная олимпиада по геометрии
+  name_year: <год>
+  url: https://olympiads.mccme.ru/ustn/
+  solutions_url: 'https://olympiads.mccme.ru/ustn/
+
+    В конце страницы есть информация прошлых лет'
+  diff: 5
+  num_stages: 1
+  date: апрель
+  grades: 8-11
+  format: offline
+  other: 'Россия: Москва, Краснодар, Казань, Санкт-Петербург, Уфа
+
+    Казахстан: Астана, Алматы
+
+    очный в Москве и других площадках
+
+    нет ссылки на регистрацию
+
+    Дополнително'
+
+ustn_geom_mccme_2024:
+  $: $ustn_geom_mccme
+  name_year: 2025
+  date: апрель 2025
+
+##################################################
+
+$innopolis:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Международная олимпиада Innopolis Open по математике
+  name_year: <год>
+  name_stage: <этап>
+  url: https://dovuz.innopolis.university/pre-olympiads/innopolis-open/math
+  solutions_url: 'https://dovuz.innopolis.university/pre-olympiads/innopolis-open/math
+
+    Можно скачать сборник задач прошлых лет. Также есть материалы прошлых лет'
+  num_stages: 2
+  grades: 7-11
+  other: "Татарстан: Иннополис\nдва отборочных заочно и финал\nhttps://dovuz.innopolis.university/pre-olympiads/innopolis-open/math\
+    \ , https://dovuz.innopolis.university/pre-olympiads \nРегистрация открыта на\
+    \ олимпиаду по программированию.\nРегистрация на олимпиаду по математике откроется\
+    \ в сентябре 2024 г.\nДополнително"
+
+$innopolis_qual:
+  $: $innopolis
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: ноябрь-декабрь
+  format: online
+
+$innopolis_final:
+  $: $innopolis
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  rating: 3
+  date: конец февраля
+  format: offline
+
+
+$innopolis_2024:
+  $: $innopolis
+  name_year: 2024-2025
+  date: 2024-2025
+
+innopolis_2024_qual_1:
+  $: $innopolis_qual $innopolis_2024
+  date:
+    start: 16.11.2024
+    end: 17.11.2024
+
+innopolis_2024_qual_2:
+  $: $innopolis_qual $innopolis_2024
+  date:
+    start: 21.12.2024
+    end: 22.12.2024
+
+innopolis_2024_final:
+  $: $innopolis_final $innopolis_2024
+  date:
+    start: 28.02.2025
+    end: 02.03.2025
+
+
+##################################################
+
+$geomshar:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада по геометрии
+  name_year: <год>
+  name_stage: <этап>
+  url: https://geometry.ru/olimp/olimpsharygin.php
+  solutions_url: ' задания прикреплены пдф-файломи к каждому году'
+  num_stages: 2
+  grades: 8-10
+  other: 'Москва
+
+    отборочный онлайн, финальный-Москва (г. Дубна)
+
+    нет ссылки на регистрацию
+
+    Дополнително'
+
+$geomshar_qual:
+  $: $geomshar
+  name_stage: отборочный этап
+  stage: 1
+  diff: 5
+  date: N/A
+  format: online
+
+$geomshar_final:
+  $: $geomshar
+  name_stage: заключительный этап
+  stage: 2
+  diff: 5
+  date: июль, август
+  format: offline
+
+
+$geomshar_2024:
+  $: $geomshar
+  name_year: 2024-2025
+  date: 2024-2025
+
+geomshar_2024_qual:
+  $: $geomshar_2024 $geomshar_qual
+
+geomshar_2024_final:
+  $: $geomshar_2024 $geomshar_final
+
+##################################################
+
+$belchonok:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Бельчонок
+  name_year: <год>
+  name_stage: <этап>
+  url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/
+  solutions_url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/arkhiv/
+  num_stages: 2
+  grades: 2-11
+  other: 'Красноярск и региональные площадки
+
+    1 этап дистанционно, 2 этап очно на региональных площадках олимпиады
+
+    Регистрация через личный кабинет по ссылке (начнется ориентировочно 1 октября):
+    https://dovuz.sfu-kras.ru/reg/
+
+    Обязательно'
+
+$belchonok_qual:
+  $: $belchonok
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date:
+    start: октябрь
+    end: январь
+  format: online
+
+$belchonok_final:
+  $: $belchonok
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 3
+  date: февраль
+  format: offline
+
+
+$belchonok_2024:
+  $: $belchonok
+  name_year: 2024-2025
+  date: 2024-2025
+
+belchonok_2024_qual:
+  $: $belchonok_2024 $belchonok_qual
+
+belchonok_2024_final:
+  $: $belchonok_2024 $belchonok_final
+
+##################################################
+
+$izumrud:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада УрФУ «Изумруд»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://izumrud.urfu.ru/ru/main/math/
+  solutions_url: https://izumrud.urfu.ru/ru/about/archive
+  num_stages: 2
+  grades: 8-11
+  other: 'Россия: Екатеринбург, Красноярск, Новосибирск, Омск, Пермь, Уфа, Челябинск
+
+    Узбекистан: Ташкент
+
+    отборочный - онлайн,  заключительный -- очно в Екатеринбурге и по регионам/странам
+    (Казахстан, Узбекистан, Таджикистан), много площадок в разных городах
+
+    Регистрация через личный кабинет по ссылке,  регистрациия проходит сентярь-начало
+    января: https://dovuz.urfu.ru/olymps/izumrud/registration
+
+    Обязательно'
+
+$izumrud_qual:
+  $: $izumrud
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date:
+    start: сентябрь
+    end: январь
+  format: online
+
+$izumrud_final:
+  $: $izumrud
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 3
+  date: январь
+  format: offline
+
+
+$izumrud_2024:
+  $: $izumrud
+  name_year: 2024-2025
+  date: 2024-2025
+
+izumrud_2024_qual:
+  $: $izumrud_2024 $izumrud_qual
+  date:
+    start: 01.09.2024
+    end: 18.01.2025
+
+izumrud_2024_final:
+  $: $izumrud_2024 $izumrud_final
+  date: 26.01.2025
+
+##################################################
+
+$matprazdnik_mccme:
+  name: '{name_main} {name_year}'
+  name_main: Мат праздник
+  name_year: <год>
+  url: https://olympiads.mccme.ru/matprazdnik/
+  solutions_url: https://olympiads.mccme.ru/matprazdnik/prob.html
+  diff: 3
+  num_stages: 1
+  date: февраль
+  grades: 6-7
+  format: offline
+  other: 'Москва, Воронеж, Красноярск
+
+    Точки проведения не только в МГУ на Воробьевых горах и в НИУ ВШЭ на Покровском
+    бульваре, но и во многих вузах и школах Москвы и области
+
+    Регистрация закрыта, нет информации.
+
+    Обязательно'
+
+matprazdnik_mccme_2024:
+  $: $matprazdnik_mccme
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$rosatom:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Отраслевая физико-математическая олимпиада  школьников «Росатом»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp.mephi.ru/rosatom
+  solutions_url: https://olymp.mephi.ru/rosatom/about/traning/task_of_previous_years
+  num_stages: 2
+  grades: 7-11
+  other: "Москва, Воронеж, Екатеринбург, Казань, Красноярск, Нижний Новгород, Новосибирск,\
+    \ Омск, Пермь, Санкт-Петербург, Ташкент, Уфа, Челябинск\nотборочный - онлайн,\
+    \ а так же очно в Москве и во многих городах РФ, заключительный -- очно в Москве\
+    \ и по регионам, много площадок в разных городах\nРегистрация через личный кабинет\
+    \ по ссылке ориентировочно в октябре: https://org.mephi.ru/auth/login \nОбязательно"
+
+$rosatom_qual:
+  $: $rosatom
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+
+$rosatom_qual_online:
+  $: $rosatom_qual
+  date: октябрь-январь
+  format: online
+
+$rosatom_qual_offline:
+  $: $rosatom_qual
+  date: октябрь-январь
+  format: offline
+
+$rosatom_final:
+  $: $rosatom
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 2
+  date: февраль-март
+  format: offline
+
+
+$rosatom_2024:
+  $: $rosatom
+  name_year: 2024-2025
+  date: 2024-2025
+
+rosatom_2024_qual_online:
+  $: $rosatom_2024 $rosatom_qual_online
+  date:
+    start: 20:00 01.11.2024
+    end: 23:59 20.12.2024
+
+rosatom_2024_qual_offline:
+  $: $rosatom_2024 $rosatom_qual_offline
+  date: 17.11.2024
+
+rosatom_2024_final:
+  $: $rosatom_2024 $rosatom_final
+  date: 09.02.2025
+
+##################################################
+
+$formulo:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Формула Единства
+  name_year: <год>
+  name_stage: <этап>
+  url: https://www.formulo.org/ru/olymp/2024-math-ru/
+  solutions_url: https://www.formulo.org/ru/olymp/
+  num_stages: 2
+  grades: 5-11
+  other: "Москва, Санкт-Петербург, Новосибирск, Екатеринбург, Казань, Нижний Новгород,\
+    \ Красноярск, Челябинск, Самара, Уфа, Ростов-на-Дону, Краснодар, Омск, Воронеж,\
+    \ Пермь, Волгоград,\nотборочный -- онлайн, заключительный -- очно. \nhttps://is.formulo.org/studentReg.php?lang=ru\n\
+    Регистрация участника олимпиады\nОбязательно"
+
+$formulo_qual:
+  $: $formulo
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: 20.10.2024-10.11.2024
+  format: online
+
+$formulo_final:
+  $: $formulo
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 2
+  date: 20.10.2024-10.11.2024
+  format: offline
+
+
+$formulo_2024:
+  $: $formulo
+  name_year: 2024-2025
+  date: 2024-2025
+
+formulo_2024_qual:
+  $: $formulo_2024 $formulo_qual
+
+formulo_2024_final:
+  $: $formulo_2024 $formulo_final
+
+##################################################
+
+$karusel:
+  name: '{name_main} {name_year}'
+  name_main: Интернет-карусель
+  name_year: <год>
+  url: https://karusel.desc.ru/
+  solutions_url: https://karusel.desc.ru/archive
+  diff: 3
+  num_stages: 1
+  date: в течение учебного года
+  grades: 5-8
+  format: online
+  other: 'Онлайн
+
+    онлайн
+
+    https://karusel.desc.ru/register/team  В настоящее время нет активных конкурсов,
+    проводятся в течении учебного года.
+
+    Обязательно'
+
+karusel_2024:
+  $: $karusel
+  name_year: 2024
+  date: 2024-2025
+
+##################################################
+
+$itmo:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: ОТКРЫТАЯ ОЛИМПИАДА ШКОЛЬНИКОВ
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp.itmo.ru/
+  solutions_url: 'https://olymp.itmo.ru/
+
+    Необходимо перейти во вкладку "прошедшие олимпиады"'
+  num_stages: 2
+  grades: 5-11
+  format: online
+  other: 'Онлайн
+
+    онлайн
+
+    https://olymp.itmo.ru/register
+
+    Регистрация участника на платформе
+
+    Дополнително'
+
+$itmo_qual:
+  $: $itmo
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: с сентября по март
+
+$itmo_final:
+  $: $itmo
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 2
+  date: с сентября по март
+
+
+$itmo_2024:
+  $: $itmo
+  name_year: 2024-2025
+  date: 2024-2025
+
+itmo_2024_qual:
+  $: $itmo_2024 $itmo_qual
+
+itmo_2024_final:
+  $: $itmo_2024 $itmo_final
+
+##################################################
+
+$olymp_mo:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Подмосковная олимпиада школьников
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olympmo.ru/mosreg-olymp-2023-2024.html
+  solutions_url: 'https://olympmo.ru/mosreg-olymp-2023-2024.html
+
+    Необходимо перейти во вкладку "архив"'
+  num_stages: 2
+  grades: 5-7
+  other: 'Москва
+
+    заочно и очно
+
+    Регистрации нет, в прошлом учебном году олимпиада по математике проходила в ноябре.
+
+    Дополнително'
+
+$olymp_mo_qual:
+  $: $olymp_mo
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: ноябрь-март
+  format: online
+
+$olymp_mo_final:
+  $: $olymp_mo
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  date: ноябрь-март
+  format: offline
+
+
+$olymp_mo_2024:
+  $: $olymp_mo
+  name_year: 2024-2025
+  date: 2024-2025
+
+olymp_mo_2024_qual:
+  $: $olymp_mo_2024 $olymp_mo_qual
+
+olymp_mo_2024_final:
+  $: $olymp_mo_2024 $olymp_mo_final
+
+##################################################
+
+$ustn_mccme:
+  name: '{name_main} {name_year}'
+  name_main: Устная олимпиада
+  name_year: <год>
+  url: https://olympiads.mccme.ru/ustn/
+  solutions_url: 'https://olympiads.mccme.ru/ustn/
+
+    В конце страницы есть материал за прошлые года'
+  diff: 3
+  num_stages: 1
+  date: апрель
+  grades: 6-7
+  format: offline
+  other: 'Москва, Казань, Краснодар
+
+    очный в Москве и на площадках
+
+    нет ссылки на регистрацию
+
+    Дополнително'
+
+ustn_mccme_2024:
+  $: $ustn_mccme
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$bibn:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада «Будущие исследователи — будущее науки»
+  name_year: <год>
+  name_stage: <этап>
+  url: http://www.unn.ru/bibn/
+  solutions_url: 'http://www.unn.ru/bibn/
+
+    Архив находится слева в меню'
+  num_stages: 2
+  grades: 7-11
+  other: 'Нижний Новгород, Красноярск, Екатеринбург, Воронеж, Казань
+
+    отборочный - заочный, очный или интернет-тур, по выбору организаторов, заключительный
+    - очно по регионам, много площадок в разных городах
+
+    нет ссылки на регистрацию
+
+    Дополнително'
+
+$bibn_qual:
+  $: $bibn
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: ноябрь, январь (но на разных площадках своё расписание)
+  format: online
+
+$bibn_final:
+  $: $bibn
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 3
+  date: ноябрь, январь (но на разных площадках своё расписание)
+  format: offline
+
+
+$bibn_2024:
+  $: $bibn
+  name_year: 2024-2025
+  date: 2024-2025
+
+bibn_2024_qual:
+  $: $bibn_2024 $bibn_qual
+
+bibn_2024_final:
+  $: $bibn_2024 $bibn_final
+
+##################################################
+
+$sammat:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: САММАТ
+  name_year: <год>
+  name_stage: <этап>
+  url: http://sammat.ru/
+  solutions_url: https://sammat.samgtu.ru/finaltour-tasks-public
+  num_stages: 2
+  grades: 6-11
+  other: "Самара, Москва, Ростов-на-Дону, Санкт-Петербург, Красноярск, Казань, Воронеж,\
+    \ Екатеринбург, \nотборочный очно или онлайн, заключительный - очно\nРегистрация\
+    \ участника \nhttps://sammat.samgtu.ru/registration \nДополнително"
+
+$sammat_qual_online:
+  $: $sammat
+  name_stage: отборочный онлайн этап
+  stage: 1
+  diff: 3
+  date: декабрь-январь
+  format: online
+
+$sammat_qual_offline:
+  $: $sammat
+  name_stage: отборочный очный этап
+  stage: 1
+  diff: 3
+  date: конец ноября
+  format: offline
+
+$sammat_final:
+  $: $sammat
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 3
+  date: февраль
+  format: offline
+
+
+$sammat_2024:
+  $: $sammat
+  name_year: 2024-2025
+  date: 2024-2025
+
+sammat_2024_qual_online:
+  $: $sammat_2024 $sammat_qual_online
+  date:
+    start: 03.12.2024
+    end: 10.01.2025
+
+sammat_2024_qual_offline:
+  $: $sammat_2024 $sammat_qual_offline
+  date:
+    start: 30.11.2024
+    end: 01.12.2024
+
+sammat_2024_final:
+  $: $sammat_2024 $sammat_final
+  date: 09.02.2025
+
+##################################################
+
+$energy_hope:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада школьников «Надежда энергетики» по математике
+  name_year: <год>
+  name_stage: <этап>
+  url: https://www.energy-hope.ru/
+  solutions_url: 'https://www.energy-hope.ru/
+
+    В меню есть раздел "Архив"'
+  num_stages: 2
+  grades: 5-11
+  other: "Смоленск, Волжский\nтренировочный и два отборочных заочно, финал очно\n\
+    Регистрация участника олимпиады\nhttps://www.energy-hope.ru/novice/reg_user.html\
+    \ \nДополнително"
+
+$energy_hope_qual:
+  $: $energy_hope
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: ноябрь-март
+  format: online
+
+$energy_hope_final:
+  $: $energy_hope
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  rating: 3
+  date: ноябрь-март
+  format: offline
+
+
+$energy_hope_2024:
+  $: $energy_hope
+  name_year: 2024-2025
+  date: 2024-2025
+
+energy_hope_2024_qual:
+  $: $energy_hope_2024 $energy_hope_qual
+
+energy_hope_2024_final:
+  $: $energy_hope_2024 $energy_hope_final
+
+##################################################
+
+$mathbaby:
+  name: '{name_main} {name_year}'
+  name_main: ДваждыДва
+  name_year: <год>
+  url: http://mathbaby.ru/olympiads
+  solutions_url: https://mathbaby.ru/olympiads/archive
+  diff: 3
+  num_stages: 1
+  date: января-май
+  grades: 1-4
+  format: offline
+  other: 'Москва, Воронеж, Казань, Красноярск, Нижний Новгород, Новосибирск, Самара,
+    Санкт-Петербург, Уфа
+
+    Австралия: Перт. Балгария: София. Казахстан: Алматы. Сербия: Белград. Украина:
+    Киев. Япония: Токио
+
+    очно в Москве и других городах и странах
+
+    нет регистрации на сайте
+
+    Дополнително'
+
+mathbaby_2025:
+  $: $mathbaby
+  name_year: 2025
+  date: 2025
+
+##################################################
+
+$donstu_talant:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада «Я – бакалавр»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://donstu-talant.ru/
+  solutions_url: https://donstu-talant.ru/mathzad/
+  num_stages: 2
+  grades: 5-11
+  other: 'Ростов
+
+    заочно и очно (Ростов)
+
+    https://distan.donstu-talant.ru/login/signup.php?
+
+    Дополнително'
+
+$donstu_talant_qual:
+  $: $donstu_talant
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: декабрь-январь, январь-февраль
+  format: online
+
+$donstu_talant_final:
+  $: $donstu_talant
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  date: декабрь-январь, январь-февраль
+  format: offline
+
+
+$donstu_talant_2024:
+  $: $donstu_talant
+  name_year: 2024-2025
+  date: 2024-2025
+
+donstu_talant_2024_qual:
+  $: $donstu_talant_2024 $donstu_talant_qual
+
+donstu_talant_2024_final:
+  $: $donstu_talant_2024 $donstu_talant_final
+
+##################################################
+
+$kvantik:
+  name: '{name_main} {name_year}'
+  name_main: Задачный конкурс журнала «Квантик» для школьников 5-8 классов
+  name_year: <год>
+  url: https://kvantik.com/konkurs/math/
+  solutions_url: https://kvantik.com/konkurs/math/2022-2023/ ссылки на прошлые года
+    на певрвой странице вкладки "Конкурсы"
+  diff: 3
+  num_stages: 1
+  grades: 5-8
+  format: online
+  other: 'заочно
+
+    Нет информации о регистрации
+
+    Дополнително'
+
+kvantik_2024:
+  $: $kvantik
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$enanos:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада «Высокие технологии и материалы будущего»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://enanos.nanometer.ru/
+  solutions_url: https://enanos.nanometer.ru/archive.html
+  num_stages: 2
+  grades: 5-11
+  other: 'Москва
+
+    1 отборочный этап - ондлайн, 2 заключительный - очно - Москва
+
+    Олимпиада проводится зимой. После регистрации открыватся доступ к материалам прошлой
+    олимпиады. https://enanos.nanometer.ru/register/
+
+    Только на сайт'
+
+$enanos_qual:
+  $: $enanos
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  date: декабрь-март
+  format: online
+
+$enanos_final:
+  $: $enanos
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  date: декабрь-март
+  format: offline
+
+
+$enanos_2024:
+  $: $enanos
+  name_year: 2024-2025
+  date: 2024-2025
+
+enanos_2024_qual:
+  $: $enanos_2024 $enanos_qual
+
+enanos_2024_final:
+  $: $enanos_2024 $enanos_final
+
+##################################################
+
+$femo:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: FEMO International
+  name_year: <год>
+  name_stage: <этап>
+  url: https://femo.kz/ru/
+  solutions_url: https://femo.kz/ru/zadachi/zadachi-2024 задания в пдф прикреплены
+    во вкладках по номерам олимпиад
+  num_stages: 3
+  grades: 1-5
+  other: 'Узбекистан: Ташкент
+
+    2 онлайн и очный, очные туры по странам:Кахахстан, Узбекистан, Кыргыстан, Таджикистан,
+    Германия
+
+    https://femo.kz/ru/registraciya
+
+    Только на сайт'
+
+$femo_1:
+  $: $femo
+  name_stage: этап 1/3
+  stage: 1
+  diff: 3
+  date: зимний, весенний, международный
+  format: online
+
+$femo_2:
+  $: $femo
+  name_stage: этап 2/3
+  stage: 2
+  diff: 3
+  date: зимний, весенний, международный
+
+$femo_3:
+  $: $femo
+  name_stage: этап 3/3
+  stage: 3
+  diff: 3
+  date: зимний, весенний, международный
+  format: offline
+
+
+$femo_2024:
+  $: $femo
+  name_year: 2024-2025
+  date: 2024-2025
+
+femo_2024_1:
+  $: $femo_1 $femo_2024
+
+femo_2024_2:
+  $: $femo_2 $femo_2024
+
+femo_2024_3:
+  $: $femo_3 $femo_2024
+
+##################################################
+
+$uchi_ru:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада Учи.ру
+  name_year: <год>
+  name_stage: <этап>
+  url: https://math-olymp.uchi.ru/
+  solutions_url: '-'
+  num_stages: 2
+  grades: 1-9
+  format: online
+  other: 'Онлайн
+
+    заочно
+
+    Регистрация через личный кабинет по ссылке: https://math-olymp.uchi.ru/
+
+    Обязательно'
+
+$uchi_ru_qual:
+  $: $uchi_ru
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  date: с января по март
+
+$uchi_ru_final:
+  $: $uchi_ru
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  date: с января по март
+
+
+$uchi_ru_2024:
+  $: $uchi_ru
+  name_year: 2024-2025
+  date: 2024-2025
+
+uchi_ru_2024_qual:
+  $: $uchi_ru_2024 $uchi_ru_qual
+
+uchi_ru_2024_final:
+  $: $uchi_ru_2024 $uchi_ru_final
+
+##################################################
+
+$smartkang:
+  name: '{name_main} {name_year}'
+  name_main: Смарт-Кенгуру
+  name_year: <год>
+  url: https://mathkang.ru/smartkang
+  solutions_url: https://mathkang.ru/rar
+  diff: 1
+  num_stages: 1
+  date: конец января
+  grades: 2-10
+  format: mixed
+  other: 'очно в школе + онлайн
+
+    https://mathkang.ru/smartkang
+
+    Обязательно'
+
+smartkang_2024:
+  $: $smartkang
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$kpfu:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада Казанского федерального университета
+  name_year: <год>
+  name_stage: <этап>
+  url: https://malun.kpfu.ru/mpo
+  solutions_url: https://malun.kpfu.ru/mpoarh
+  num_stages: 2
+  grades: 5-11
+  other: 'Казань
+
+    заочно, а потом очно по площадкам (может, можно открыть где-то у себя)
+
+    Регистрация открывается в ноябреhttps://malun.kpfu.ru/mpoit
+
+    Обязательно'
+
+$kpfu_qual:
+  $: $kpfu
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  format: online
+  date: ноябрь-декабрь
+
+$kpfu_final:
+  $: $kpfu
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  rating: 3
+  format: offline
+  date: конец января
+
+
+$kpfu_2024:
+  $: $kpfu
+  name_year: 2024-2025
+  date: 2024-2025
+
+kpfu_2024_qual:
+  $: $kpfu_2024 $kpfu_qual
+
+kpfu_2024_final:
+  $: $kpfu_2024 $kpfu_final
+
+##################################################
+
+$mathcat:
+  name: '{name_main} {name_year}'
+  name_main: MathCat
+  name_year: <год>
+  url: https://mathcat.info/
+  solutions_url: https://mathcat.info/show/tasks/
+  diff: 1
+  num_stages: 1
+  date: 30.11.2024 - очно, 01.12.2024 - онлайн
+  grades: 1-11
+  format: offline
+  other: "Москва, Нижний новгород, Минск, пермь, Санкт-Петербург, Уфа, Ульяновск,\
+    \ Волгоград, Екатеринбург, Алматы, \nочно на разных площадках, можно сделать свою\n\
+    Регистрация начнется 01.11.2024 https://mathcat.info/lk/register/\nДополнително"
+
+mathcat_2024:
+  $: $mathcat
+  name_year: 2024
+  date: 2024-2025
+
+##################################################
+
+$olymp344:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Интернет-олимпиада «НЕВСКИЙ ИНТЕГРАЛ»
+  name_year: <год>
+  name_stage: <этап>
+  url: http://www.olymp344.ru/
+  solutions_url: http://www.olymp344.ru/arhiv-olimpiad
+  num_stages: 2
+  grades: 1-10
+  other: 'Онлайн/Санкт-Петербург
+
+    1 этап онлайн, 2 - очно, ГБОУ лицей №344 Невского района Санкт-Петербурга.
+
+    не нужна, достаточно зарегистрироваться на сайте
+
+    Дополнително'
+
+$olymp344_qual:
+  $: $olymp344
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  date: 1 тур октябрь, 2 - февраль
+  format: online
+
+$olymp344_final:
+  $: $olymp344
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  date: 1 тур октябрь, 2 - февраль
+  format: offline
+
+
+$olymp344_2024:
+  $: $olymp344
+  name_year: 2024-2025
+  date: 2024-2025
+
+olymp344_2024_qual:
+  $: $olymp344_2024 $olymp344_qual
+
+olymp344_2024_final:
+  $: $olymp344_2024 $olymp344_final
+
+##################################################
+
+$matznanie:
+  name: '{name_main} {name_year}'
+  name_main: Математическая сДача
+  name_year: <год>
+  url: https://www.matznanie.ru/competitions/competitions.html
+  solutions_url: https://www.matznanie.ru/examples/MAT_SDACHA/mat_sdacha_examples_12.pdf
+  diff: 1
+  num_stages: 1
+  date: март, для 3-4 и 5-6 кл проводился  в мае 2024
+  grades: 1-2, 3-4, 5-6
+  format: offline
+  other: 'Москва
+
+    очно в Москве,  посёлок Совхоза имени Ленина, дом 21А, Инженерная школа № 548.
+
+    Можно зарегистрироваться на сайте. Олимпиады проводятся весной. https://cntrea.ru/msmay24/
+
+    Дополнително'
+
+matznanie_2024:
+  $: $matznanie
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$nonstop:
+  name: '{name_main} {name_year}'
+  name_main: Олимпиада Математика НОН-СТОП
+  name_year: <год>
+  url: https://mathnonstop.ru/
+  diff: 3
+  num_stages: 1
+  date: март
+  grades: 4-8
+  format: offline
+  other: 'очная, есть площадки в регионах и всегда можно открыть площадку в своей
+    школе, это просто
+
+    https://rs.mathnonstop.ru/
+
+    Дополнително'
+
+nonstop_2024:
+  $: $nonstop
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$kenguru:
+  name: '{name_main} {name_year}'
+  name_main: Математический конкурс "Кенгуру"
+  name_year: <год>
+  url: https://www.bakonkurs.by/kenguru/kenguru.php
+  solutions_url: https://www.bakonkurs.by/kenguru/kenguru_primer.php
+  diff: 1
+  num_stages: 1
+  grades: 1-11
+  format: online
+  other: "онлайн\nзаочно\nВ настоящее время регистрации нет \nОбязательно"
+
+kenguru_2025:
+  $: $kenguru
+  name_year: 2025
+  date: 2025
+
+##################################################
+
+$euler:
+  name: '{name_main} {name_year}'
+  name_main: Олимпиада имени Леонарда Эйлера
+  name_year: <год>
+  url: https://www.matol.ru/
+  solutions_url: https://www.matol.ru/archives.php
+  diff: 5
+  num_stages: 1
+  grades: 8
+  other: 'как регион по математике
+
+    Обязательно'
+
+euler_2024:
+  $: $euler
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$arcticum:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Арктическая олимпиада «Полярный круг»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://arcticum.yanao.ru/activity/38618/
+  solutions_url: https://arcticum.yanao.ru/activity/53253/
+  num_stages: 2
+  grades: 4-11
+  other: 'ЯНАО и Москва
+
+    Дополнително'
+
+$arcticum_qual:
+  $: $arcticum
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  format: online
+
+$arcticum_final:
+  $: $arcticum
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  format: offline
+
+
+$arcticum_2024:
+  $: $arcticum
+  name_year: 2024-2025
+  date: 2024-2025
+
+arcticum_2024_qual:
+  $: $arcticum_2024 $arcticum_qual
+
+arcticum_2024_final:
+  $: $arcticum_2024 $arcticum_final
+
+##################################################
+
+$mendeleev:
+  name: '{name_main} {name_year}'
+  name_main: Межрегиональная многопрофильная олимпиада школьников «Менделеев» по математике
+  name_year: <год>
+  url: https://abiturient.utmn.ru/olimpiady/mendeleev/
+  solutions_url: https://abiturient.utmn.ru/olimpiady/mendeleev/arkhiv-2023-2024/
+  diff: 3
+  num_stages: 1
+  grades: 5-7
+  format: offline
+  other: 'декабрь?
+
+    Дополнително'
+
+mendeleev_2024:
+  $: $mendeleev
+  name_year: 2024-2025
+  date: 2024-2025
+
+##################################################
+
+$yandex:
+  name: '{name_main} {name_year}'
+  name_main: Игровая олимпиада по математике Плюс Детям
+  name_year: <год>
+  url: https://plus.yandex.ru/kids_olymp
+  diff: 1
+  num_stages: 1
+  grades: 1-4
+  format: online
+  other: '
+
+    На платформе Яндекс Учебник (доступен на компьютерах, планшетах и смартфонах).
+    Если у ученика нет аккаунта в Учебнике, родителю нужно авторизоваться в нём с
+    Яндекс ID и добавить ребёнка в разделе «Мои дети».
+
+
+
+    Обязательно'
+
+yandex_2024:
+  $: $yandex
+  name_year: 2024-2025
+  date:
+    start: 27.11.2024
+    end: 17.12.2024
+
+##################################################
+
+$rudn:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Олимпиада РУДН для школьников
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olympiada.rudn.ru/
+  num_stages: 2
+  grades: 7-11
+  other: 'Москва
+
+    1 - октябрь-январь, 2 - февраль
+
+    Дополнително'
+
+$rudn_qual:
+  $: $rudn
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  format: online
+
+$rudn_final:
+  $: $rudn
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  format: offline
+
+
+$rudn_2024:
+  $: $rudn
+  name_year: 2024-2025
+  date: 2024-2025
+
+rudn_2024_qual:
+  $: $rudn_2024 $rudn_qual
+
+rudn_2024_final:
+  $: $rudn_2024 $rudn_final
+
+##################################################
+
+$ormo_tsu:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Открытая олимпиада вузов Томской области по математике
+  name_year: <год>
+  name_stage: <этап>
+  url: https://abiturient.tsu.ru/ru/content/ormo
+  solutions_url: https://abiturient.tsu.ru/ru/content/answers-ORMO
+  num_stages: 2
+  grades: 8-11
+  other: 'В нескольких городах есть, можно подать аявку на проведение у себя в школе
+
+    1 - ноябрьь-январь, 2 - март
+
+    Дополнително'
+
+$ormo_tsu_qual:
+  $: $ormo_tsu
+  name_stage: отборочный этап
+  stage: 1
+  diff: 3
+  format: online
+
+$ormo_tsu_final:
+  $: $ormo_tsu
+  name_stage: заключительный этап
+  stage: 2
+  diff: 3
+  format: offline
+
+
+$ormo_tsu_2024:
+  $: $ormo_tsu
+  name_year: 2024-2025
+  date: 2024-2025
+
+ormo_tsu_2024_qual:
+  $: $ormo_tsu_2024 $ormo_tsu_qual
+
+ormo_tsu_2024_final:
+  $: $ormo_tsu_2024 $ormo_tsu_final
+
+##################################################
+
+$young_talents:
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Многопредметная олимпиада «Юные таланты»
+  name_year: <год>
+  name_stage: <этап>
+  url: https://olymp.psu.ru/disciplines/
+  num_stages: 2
+  grades: 5-11
+  other: 'Пермь
+
+    1 - апрель, 2 - май
+
+    Дополнително'
+
+$young_talents_qual:
+  $: $young_talents
+  name_stage: отборочный этап
+  stage: 1
+  diff: 1
+  format: online
+
+$young_talents_final:
+  $: $young_talents
+  name_stage: заключительный этап
+  stage: 2
+  diff: 1
+  format: offline
+
+
+$young_talents_2024:
+  $: $young_talents
+  name_year: 2024-2025
+  date: 2024-2025
+
+young_talents_2024_qual:
+  $: $young_talents_2024 $young_talents_qual
+
+young_talents_2024_final:
+  $: $young_talents_2024 $young_talents_final
+
+##################################################
