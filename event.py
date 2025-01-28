@@ -81,6 +81,7 @@ class Event(NS):
         {
             'id': 'grades',
             'title': 'Классы',
+            'sortable': False,
         },
         {
             'id': 'diff',
@@ -139,7 +140,7 @@ class Event(NS):
                 else no_value
             ),
             'url': html_link(self.url, title='=>') if self.url else no_value,
-            'grades': dump_grades(self.grades) if self.grades else no_value,
+            'grades': RespItem(dump_grades(self.grades), sort_key=sorted(self.grades)) if self.grades else no_value,
             'diff': RespItem(self.diff * emoji_star, sort_key=self.diff) if self.diff is not junk else no_value,
             'date': format_date(self.date) if self.date is not junk else no_value,
             'rating': RespItem(self.rating * 'I' + ' ' + (4 - self.rating) * emoji_trophy, sort_key=self.rating) if self.rating else no_value,

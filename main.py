@@ -1,8 +1,4 @@
-# scp -r -i %USERPROFILE%/.ssh/vdsina D:/Github/olymp root@89.110.80.181:/root/
-# cat /var/log/nginx.denball.xyz.access_log | grep -v 5.35.38.201 | more
-
-# nix-shell -p python312 python312Packages.flask python312Packages.pyyaml
-# python3.12 main.py
+# nix-shell -p python312 python312Packages.flask python312Packages.pyyaml --command 'python3.12 main.py'
 
 from __future__ import annotations
 import sys

@@ -53,7 +53,28 @@
 </head>
 <body>
     <h1>⭐ Табличка с олимпиадами</h1>
+    <a href="/raw.json">-> raw data</a>
+    <br>
+
     <input type="checkbox" id="chk_show_meta"> показывать мета-события
+    <br>
+
+    <label for="grade_selection">Класс</label>
+    <select id="grade_selection">
+        <option value="0" selected>любой</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+    </select>
+
     <table id="dataTable">
         <thead>
             <tr id="tableHeader"></tr>
@@ -68,12 +89,22 @@ let sortDirection = {};
 let data;
 let columns;
 let columns_map = {};
+
 let show_meta = false;
+let grade_selection = 0;
 
 document.getElementById('chk_show_meta').addEventListener(
     'change',
     function () {
         show_meta = this.checked;
+        update_table();
+    }
+);
+
+document.getElementById('grade_selection').addEventListener(
+    'change',
+    function () {
+        grade_selection = this.value;
         update_table();
     }
 );
@@ -84,6 +115,11 @@ function update_table() {
     tbody.innerHTML = ""; // deletes childs?
     data.forEach(row => {
         if (!show_meta && row.is_meta.value) return;
+        console.log(0 - - grade_selection);
+        console.log(row.grades.sort_key);
+        console.log(row.grades.sort_key.indexOf(grade_selection));
+        if ((grade_selection != 0) && (row.grades.sort_key === null || row.grades.sort_key.indexOf(0 - - grade_selection) == -1)) return;
+        console.log(row.grades)
         const tr = document.createElement("tr");
         tr.dataset.id = row.id.value;
         for (const column of columns) {
@@ -118,7 +154,6 @@ function sort_table_by_column(id) {
 
     })
     update_table();
-
 }
 
 
