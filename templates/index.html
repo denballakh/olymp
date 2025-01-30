@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🏆 Табличка с олимпиадами</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             background-color: #1e1e2f;
             color: #e5e5e5;
@@ -134,7 +137,7 @@ function update_table() {
         if ((grade_selection != 0) && (row.grades.sort_key === null || row.grades.sort_key.indexOf(0 - - grade_selection) == -1)) return;
         // console.log(row.grades)
         const tr = document.createElement("tr");
-        tr.dataset.id = row.id.value;
+        tr.id = row.id.other;
         for (const column of columns) {
             // if (!column.visible) continue;
 
@@ -185,7 +188,7 @@ function create_table_header() {
 
         const th = document.createElement("th");
         th.textContent = column.title;
-        th.dataset.column = column.id;
+        // th.dataset.column = column.id;
 
         if (column.sortable) {
             th.addEventListener("click", () => sort_table_by_column(column.id));
@@ -201,13 +204,12 @@ function create_table_header() {
         if (!column.style) continue;
         console.log(column)
 
-        if (column.style.width)
-            style.innerHTML += `
-                th:nth-child(${index + 1}),
-                td:nth-child(${index + 1}) {
-                    width: ${column.style.width};
-                }
-            `;
+        style.innerHTML += `
+            th:nth-child(${index + 1}),
+            td:nth-child(${index + 1}) {
+                ${column.style}
+            }
+        `;
 
     }
     document.head.appendChild(style); // Add the style element to the head

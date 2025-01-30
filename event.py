@@ -49,6 +49,7 @@ class NS(C[str, t.Any]):
 class RespItem:
     value: t.Any
     sort_key: t.Any | None
+    other: t.Any | None = None
 
 
 no_value = RespItem('?', None)
@@ -75,6 +76,7 @@ class Event(NS):
             'title': 'Связанное',
             'sortable': False,
             'html': True,
+            'style': 'max-width: 30ch;'
         },
         {
             'id': 'name',
@@ -141,19 +143,16 @@ class Event(NS):
     # }
 
     def display(self) -> dict[str, t.Any]:
-        res = {
+        res = {# id="{self.id.replace('$', '_meta_')}"
             'id': RespItem(
-                f'<a id="{self.id.replace('$', '_meta_')}" href="#{self.id.replace('$', '_meta_')}">{self.id}</a>',
-                sort_key=self.id),
+                f'<a href="#{self.id.replace('$', '_meta_')}">{self.id}</a>',
+                sort_key=self.id.removeprefix('$'),
+                other=self.id.replace('$', '_meta_')),
             'parents': format_parents(self),
             'is_meta': self.id.startswith('$'),
             # 'name': ', '.join(str(v) for k, v in sorted(self.items()) if k.startswith('name') if v),
             'name': self.name.format_map(self) if self.name is not junk else no_value,
-            'stage': (
-                RespItem(f'{self.stage}/{self.num_stages}', sort_key=self.stage / self.num_stages)
-                if self.stage is not junk and self.num_stages is not junk
-                else no_value
-            ),
+            'stage': format_stage(self),
             'url': html_link(self.url, title='=>') if self.url else no_value,
             'grades': (
                 RespItem(dump_grades(self.grades), sort_key=sorted(self.grades))
@@ -220,6 +219,16 @@ class Event(NS):
         res = {k: dataclasses.asdict(v) for k, v in res.items()}
         return res
 
+def format_stage(self: Event) -> t.Any:
+    match self.stage, self.num_stages:
+        case (int(), int()):
+            return RespItem(f'{self.stage}/{self.num_stages}', sort_key=self.stage / self.num_stages)
+        case (_, int()):
+            return RespItem(f'?/{self.num_stages}', sort_key=None)
+        case (int(), _):
+            return RespItem(f'{self.stage}/?', sort_key=None)
+        case _:
+            return no_value
 
 def format_parents(self: Event) -> str:
     import gc
@@ -229,7 +238,7 @@ def format_parents(self: Event) -> str:
         *[e for e in gc.get_objects() if isinstance(e, Event) and self in e.__C_b__],
     ]:
         if 'id' in e:
-            res += html_link(f'#{e.id.replace('$', '_meta_')}', title=e.id) + '\n'
+            res += html_link(f'#{e.id.replace('$', '_meta_')}', title=e.id) + ' '
     return res.strip()
 
 
@@ -332,7 +341,7 @@ def format_urls(d: t.Any) -> str:
                     if isinstance(x, dict)
                     else html_link(
                         x,
-                        f'{i}=>',
+                        f'[{i}]=>',
                     )
                 )
                 for i, x in enumerate(d)
@@ -410,8 +419,10 @@ def _load_segment(text: str, blt: C[str, Event]) -> C[str, Event]:
         if 'grades' in defi:
             event.grades = parse_grades(defi.pop('grades'))
 
-        if 'urls' in defi:
-            event.urls = event.get('urls', []) + defi.pop('urls')
+        if 'urls' not in defi:
+            defi['urls'] = []
+        # if 'urls' in defi:
+        #     event.urls = event.get('urls', []) + defi.pop('urls')
 
         event.__C_d__ |= defi
 

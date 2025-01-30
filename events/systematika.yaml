@@ -1,34 +1,218 @@
 $systematika:
   $: $$math
-  name: '{name_num} {name_main}, {name_stage}'
+  name: '{name_num} {name_main}'
   name_num: <номер>
   name_main: Олимипиада Систематики
-  name_stage: <этап>
   url: https://systematika.org/olimpiada/
-  solutions_url: https://systematika.org/olimpiada/tasks
-  num_stages: 2
+  urls:
+    - https://systematika.org/olimpiada/tasks
+  num_stages: 1
+  num_stages: 1
   grades: 1-9
   format: online
-  other: '
-    Обязательно'
+
+
+## 01
+systematika_01:
+  $: $systematika
+  name_num: I
+  stage: 1
+  date: утеряна в истории
+
+
+## 02
+systematika_02:
+  $: $systematika
+  name_num: II
+  stage: 1
+  date: 14.01.2018
+  urls:
+    - https://systematika.org/olimpiada/year-2018 /
+
+
+## 03
+systematika_03:
+  $: $systematika
+  name_num: III
+  stage: 1
+  date: 30.10.2018
+  urls:
+    - https://systematika.org/olimpiada/year-2018 /
+
+
+## 04
+systematika_04:
+  $: $systematika
+  name_num: IV
+  stage: 1
+  date: 27.01.2019
+  urls:
+    - https://systematika.org/olimpiada/year-2019 /
+
+
+## 05
+systematika_05:
+  $: $systematika
+  name_num: V
+  stage: 1
+  date: 29.09.2019
+  urls:
+    - https://systematika.org/olimpiada/year-2019 /
+
+
+## 06
+systematika_06:
+  $: $systematika
+  name_num: VI
+  stage: 1
+  date: 26.01.2020
+  urls:
+    - https://systematika.org/olimpiada/year-2020/
+
+
+## 07
+systematika_07:
+  $: $systematika
+  name_num: VII
+  stage: 1
+  date: 25.10.2020
+  urls:
+    - https://systematika.org/olimpiada/year-2020/
+
+
+## 08
+systematika_08:
+  $: $systematika
+  name_num: VIII
+  stage: 1
+  date: 31.01.2021
+  urls:
+    - https://systematika.org/olimpiada/year-2021/
+
+
+## 09
+systematika_09:
+  $: $systematika
+  name_num: IX
+  stage: 1
+  date: 24.10.2021
+  urls:
+    - https://systematika.org/olimpiada/year-2021/
+
+
+
+## 10
+systematika_10:
+  $: $systematika
+  name_num: X
+  stage: 1
+  date: 30.01.2022
+  urls:
+    - https://systematika.org/olimpiada/year-2022/
+
+
+## Начиная с 11 олимпиада состоит из двух туров
+$systematika$since_11:
+  $: $systematika
+  name: '{name_num} {name_main}, {name_stage}'
+  name_stage: <этап>
+  num_stages: 2
 
 $systematika_qual:
-  $: $systematika
+  $: $systematika$since_11
   name_stage: 1-й тур
   diff: 1
   stage: 1
 
 $systematika_final:
-  $: $systematika
+  $: $systematika$since_11
   name_stage: 2-й тур
   diff: 3
   stage: 2
 
 
+## 11
+$systematika_11:
+  $: $systematika$since_11
+  name_num: XI
+  urls:
+    - https://systematika.org/olimpiada/year-2022/
 
+
+systematika_11_qual:
+  $: $systematika_qual $systematika_11
+  date: 02.10.2022
+
+systematika_11_final:
+  $: $systematika_final $systematika_11
+  date: 23.10.2022
+
+
+
+## 12
+$systematika_12:
+  $: $systematika$since_11
+  name_num: XII
+  urls:
+    - https://systematika.org/olimpiada/year-2023/
+
+systematika_12_qual:
+  $: $systematika_qual $systematika_12
+  date:
+    start: 16.01.2023
+    end: 05.02.2023
+
+systematika_12_final:
+  $: $systematika_final $systematika_12
+  date: 26.02.2023
+
+
+
+## 13
+$systematika_13:
+  $: $systematika$since_11
+  name_num: XIII
+  urls:
+    - https://systematika.org/olimpiada/year-2023/
+
+systematika_13_qual:
+  $: $systematika_qual $systematika_13
+  date:
+    start: 15.05.2023
+    end: 07.06.2023
+
+systematika_13_final:
+  $: $systematika_final $systematika_13
+  date: 09.07.2023
+
+
+
+## 14
+$systematika_14:
+  $: $systematika$since_11
+  name_num: XIV
+  urls:
+    - https://systematika.org/olimpiada/year-2023/
+
+
+systematika_14_qual:
+  $: $systematika_qual $systematika_14
+  date:
+    start: 18.09.2023
+    end: 30.09.2023
+
+systematika_14_final:
+  $: $systematika_final $systematika_14
+  date: 29.10.2023
+
+
+
+## 15
 $systematika_15:
-  $: $systematika
-  name_num: 15
+  $: $systematika$since_11
+  name_num: XV
+  urls:
+    - https://systematika.org/olimpiada/year-2024/
 
 systematika_15_qual:
   $: $systematika_qual $systematika_15
@@ -41,24 +225,32 @@ systematika_15_final:
   date: 25.02.2024
 
 
+## 16
 $systematika_16:
-  $: $systematika
-  name_num: 16
+  $: $systematika$since_11
+  name_num: XVI
+  urls:
+    - https://systematika.org/olimpiada/year-2024/
+
 
 systematika_16_qual:
   $: $systematika_qual $systematika_16
   date:
     start: 25.09.2024
-    end: 06.10.2024
+    end: 06.10.2024 # или 13.10.2024?
 
 systematika_16_final:
   $: $systematika_final $systematika_16
   date: 27.10.2024
 
 
+## 17
 $systematika_17:
-  $: $systematika
-  name_num: 17
+  $: $systematika$since_11
+  name_num: XVII
+  urls:
+    - https://systematika.org/olimpiada/year-2025/
+
 
 systematika_17_qual:
   $: $systematika_qual $systematika_17

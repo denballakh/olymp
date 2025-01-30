@@ -315,6 +315,7 @@ $arhimedes:
 arhimedes_2024:
   $: $arhimedes
   name_year: 2024
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -869,6 +870,7 @@ $ustn_geom_mccme:
 ustn_geom_mccme_2024:
   $: $ustn_geom_mccme
   name_year: 2025
+  stage: 1
   date: 04.2025
 
 ##################################################
@@ -1118,6 +1120,7 @@ $matprazdnik_mccme:
 matprazdnik_mccme_2024:
   $: $matprazdnik_mccme
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1254,6 +1257,7 @@ $karusel:
 karusel_2024:
   $: $karusel
   name_year: 2024
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1382,6 +1386,7 @@ $ustn_mccme:
 ustn_mccme_2024:
   $: $ustn_mccme
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1571,6 +1576,7 @@ $mathbaby:
 mathbaby_2025:
   $: $mathbaby
   name_year: 2025
+  stage: 1
   date: 2025
 
 ##################################################
@@ -1642,6 +1648,7 @@ $kvantik:
 kvantik_2024:
   $: $kvantik
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1819,6 +1826,7 @@ $smartkang:
 smartkang_2024:
   $: $smartkang
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1889,6 +1897,7 @@ $mathcat:
 mathcat_2024:
   $: $mathcat
   name_year: 2024
+  stage: 1
   date:
     - moment: 30.11.2024
       note: очно
@@ -1966,6 +1975,7 @@ $matznanie:
 matznanie_2024:
   $: $matznanie
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -1990,6 +2000,7 @@ $nonstop:
 nonstop_2024:
   $: $nonstop
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -2009,6 +2020,7 @@ $kenguru:
 kenguru_2025:
   $: $kenguru
   name_year: 2025
+  stage: 1
   date: 2025
 
 ##################################################
@@ -2029,6 +2041,7 @@ $euler:
 euler_2024:
   $: $euler
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -2091,6 +2104,7 @@ $mendeleev:
 mendeleev_2024:
   $: $mendeleev
   name_year: 2024-2025
+  stage: 1
   date: 2024-2025
 
 ##################################################
@@ -2114,6 +2128,7 @@ $yandex:
 yandex_2023:
   $: $yandex
   name_year: 2023
+  stage: 1
   date:
     start: 27.11.2023
     end: 17.12.2023

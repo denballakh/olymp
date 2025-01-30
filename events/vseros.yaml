@@ -1,6 +1,8 @@
 $vseros:
-  name: '{name_main} {name_year}, {name_stage}'
-  name_main: Всероссийская олимпиада школьников
+  $: $$math
+  name: '{name_cnt} {name_main} {name_year}, {name_stage}'
+  name_cnt: <номер>
+  name_main: ВсОШ
   name_year: <год>
   name_stage: <этап>
   url: https://vos.olimpiada.ru/
@@ -9,7 +11,7 @@ $vseros:
     - url: https://vos.olimpiada.ru/
       note: сайт
     - url: https://olympiads.mccme.ru/vmo/
-      note: архив задач
+      note: архив за все годы
 
 $vseros_0:
   $: $vseros
@@ -69,6 +71,7 @@ $vseros_5:
 $vseros_2008:
   $: $vseros
   name_year: 2008-2009
+  name_cnt: XXXV
 
 # vseros_2008_1: # нет информации
 #   $: $vseros_1 $vseros_2008
@@ -101,6 +104,7 @@ vseros_2008_4:
 $vseros_2009:
   $: $vseros
   name_year: 2009-2010
+  name_cnt: XXXVI
 
 # vseros_2009_1: # нет информации
 #   $: $vseros_1 $vseros_2009
@@ -135,6 +139,7 @@ vseros_2009_4:
 $vseros_2010:
   $: $vseros
   name_year: 2010-2011
+  name_cnt: XXXVII
 
 # vseros_2010_1: # нет информации
 #   $: $vseros_1 $vseros_2010
@@ -173,6 +178,7 @@ vseros_2010_4:
 $vseros_2011:
   $: $vseros
   name_year: 2011-2012
+  name_cnt: XXXVIII
 
 # vseros_2011_1: # нет информации
 #   $: $vseros_1 $vseros_2011
@@ -211,6 +217,7 @@ vseros_2011_4:
 $vseros_2012:
   $: $vseros
   name_year: 2012-2013
+  name_cnt: XXXIX
 
 # vseros_2012_1: # нет информации
 #   $: $vseros_1 $vseros_2012
@@ -249,6 +256,7 @@ vseros_2012_4:
 $vseros_2013:
   $: $vseros
   name_year: 2013-2014
+  name_cnt: XL
 
 vseros_2013_1:
   $: $vseros_1 $vseros_2013
@@ -287,6 +295,7 @@ vseros_2013_4:
 $vseros_2014:
   $: $vseros
   name_year: 2014-2015
+  name_cnt: XLI
 
 vseros_2014_1:
   $: $vseros_1 $vseros_2014
@@ -325,6 +334,7 @@ vseros_2014_4:
 $vseros_2015:
   $: $vseros
   name_year: 2015-2016
+  name_cnt: XLII
 
 vseros_2015_1:
   $: $vseros_1 $vseros_2015
@@ -363,6 +373,7 @@ vseros_2015_4:
 $vseros_2016:
   $: $vseros
   name_year: 2016-2017
+  name_cnt: XLIII
 
 vseros_2016_1:
   $: $vseros_1 $vseros_2016
@@ -401,6 +412,7 @@ vseros_2016_4:
 $vseros_2017:
   $: $vseros
   name_year: 2017-2018
+  name_cnt: XLIV
 
 vseros_2017_1:
   $: $vseros_1 $vseros_2017
@@ -437,6 +449,7 @@ vseros_2017_4:
 $vseros_2018:
   $: $vseros
   name_year: 2018-2019
+  name_cnt: XLV
 
 vseros_2018_1:
   $: $vseros_1 $vseros_2018
@@ -475,6 +488,7 @@ vseros_2018_4:
 $vseros_2019:
   $: $vseros
   name_year: 2019-2020
+  name_cnt: XLVI
 
 vseros_2019_1:
   $: $vseros_1 $vseros_2019
@@ -482,7 +496,7 @@ vseros_2019_1:
 
 vseros_2019_2:
   $: $vseros_2 $vseros_2019
-  date: 1.12.2019
+  date: 01.12.2019
 
 vseros_2019_3:
   $: $vseros_3 $vseros_2019
@@ -506,6 +520,7 @@ vseros_2019_4:
 $vseros_2020:
   $: $vseros
   name_year: 2020-2021
+  name_cnt: XLVII
 
 vseros_2020_1:
   $: $vseros_1 $vseros_2020
@@ -543,11 +558,12 @@ vseros_2020_4:
 $vseros_2021:
   $: $vseros
   name_year: 2021-2022
+  name_cnt: XLVIII
 
 vseros_2021_1:
   $: $vseros_1 $vseros_2021
   date:
-    - start: 18.10.2021 - 20.10.2021
+    - moment: 18.10.2021 - 20.10.2021
       note: 4-6 классы
     - moment: 19.10.2021
       note: 7-11 классы
@@ -587,11 +603,12 @@ vseros_2021_4:
 $vseros_2022:
   $: $vseros
   name_year: 2022-2023
+  name_cnt: XLIX
 
 vseros_2022_1:
   $: $vseros_1 $vseros_2022
   date:
-    - start: 19.10.2022 - 21.10.2022
+    - moment: 19.10.2022 - 21.10.2022
       note: 4-6 классы
     - moment: 19.10.2022
       note: 7-11 классы
@@ -635,11 +652,12 @@ vseros_2022_4:
 $vseros_2023:
   $: $vseros
   name_year: 2023-2024
+  name_cnt: L
 
 vseros_2023_1:
   $: $vseros_1 $vseros_2023
   date:
-    - start: 18.10.2023 - 20.10.2023
+    - moment: 18.10.2023 - 20.10.2023
       note: 4-6 классы
     - moment: 17.10.2023
       note: 7-11 классы
@@ -676,12 +694,12 @@ vseros_2023_4:
 $vseros_2024:
   $: $vseros
   name_year: 2024-2025
+  name_cnt: LI
 
 vseros_2024_1:
   $: $vseros_1 $vseros_2024
   date:
-    - start: 16.10.2024
-      end: 18.10.2024
+    - moment: 16.10.2024 - 18.10.2024
       note: 4-6 классы
     - moment: 15.10.2024
       note: 7-11 классы
@@ -716,11 +734,12 @@ vseros_2024_4:
 # $vseros_2025:
 #   $: $vseros
 #   name_year: 2025-2026
+#   name_cnt: LII
 
 # vseros_2025_1:
 #   $: $vseros_1 $vseros_2025
 #   date:
-#     - start: x.10.2025 - x.10.2025
+#     - moment: x.10.2025 - x.10.2025
 #       note: 4-6 классы
 #     - moment: x.10.2025
 #       note: 7-11 классы
