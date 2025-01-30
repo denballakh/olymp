@@ -59,10 +59,15 @@
 </head>
 <body>
     <h1>⭐ Табличка с олимпиадами</h1>
+
+    <div>created by <a href="https://github.com/denballakh">denballakh</a></div>
+    <br>
+
+    <a href="/about">about</a>
     <a href="/raw.json">-> raw data</a>
     <br>
 
-    <input type="checkbox" id="chk_show_meta"> показывать мета-события
+    <input type="checkbox" id="chk_show_meta" checked> показывать мета-события
     <br>
 
     <label for="grade_selection">Класс</label>
@@ -98,7 +103,7 @@ let data;
 let columns;
 let columns_map = {};
 
-let show_meta = false;
+let show_meta = true;
 let grade_selection = 0;
 
 document.getElementById('chk_show_meta').addEventListener(
@@ -131,7 +136,7 @@ function update_table() {
         const tr = document.createElement("tr");
         tr.dataset.id = row.id.value;
         for (const column of columns) {
-            if (!column.visible) continue;
+            // if (!column.visible) continue;
 
             const td = document.createElement("td");
 
@@ -150,12 +155,20 @@ function sort_table_by_column(id) {
     const direction = sortDirection[id] === 'asc' ? 'desc' : 'asc';
     sortDirection[id] = direction;
 
+    console.log('sorting', id, direction)
     data.sort((a, b) => {
+        // -1 => a b
+        // +1 => b a
+        //  0 => a==b
         let a_key, b_key;
         a_key = a[id].sort_key;
         b_key = b[id].sort_key;
+        console.log(a_key, b_key)
         if (a_key === null) return +1;
         if (b_key === null) return -1;
+        console.log(a, b, direction === "asc"
+            ? a_key < b_key ? -1 : a_key > b_key ? +1 : 0
+            : a_key < b_key ? +1 : a_key > b_key ? -1 : 0)
         return direction === "asc"
             ? a_key < b_key ? -1 : a_key > b_key ? +1 : 0
             : a_key < b_key ? +1 : a_key > b_key ? -1 : 0
@@ -168,7 +181,7 @@ function sort_table_by_column(id) {
 function create_table_header() {
     const tableHeader = document.getElementById("tableHeader");
     for (const column of columns) {
-        if (!column.visible) continue;
+        // if (!column.visible) continue;
 
         const th = document.createElement("th");
         th.textContent = column.title;
@@ -213,8 +226,14 @@ async function initialize() {
 
     document.getElementById('loading_text').style.display = 'none';
 
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 }
-
+ // onclick="navigator.clipboard.writeText(\'{self.id}\')"
 initialize();
 
 </script>

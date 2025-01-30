@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 about</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #e5e5e5;
+            font-family: monospace;
+            white-space: pre;
+        }
+        a {
+            color: #4dabf7; /* Soft blue color for links */
+            text-decoration: none; /* Remove underline by default */
+            font-weight: 500; /* Make links slightly bold */
+        }
+
+        a:hover {
+            color: #82caff; /* Brighter blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        a:active {
+            color: #339af0; /* Darker blue for active state */
+        }
+
+        a:visited {
+            color: #9fa6c4; /* Muted color for visited links */
+        }
+    </style>
+</head>
+<body>
+<a href="/"><- go back to the table</a>
+
+
+_:
+  name: some name
+  url: https://example.com/
+  solutions_url: https://example.com/solutions/
+  date: 01.02.2003
+  diff: 5
+  stage: 7
+  num_stages: 10
+  grades: 5-15
+  rating: 2
+  format: online
+
+
+$XXX:
+  name_0: Олимпиада XXX
+  url: https://XXX.ru/
+  solutions_url: https://XXX.ru/ru/about/archive
+  num_stages: 2
+  grades: 8-11
+
+$XXX_qual:
+  $: $XXX
+  name_1: отборочный этап
+  stage: 1
+  diff: 1
+  date: <месяц проведения>
+  format: online
+
+$XXX_final:
+  $: $XXX
+  name_1: заключительный этап
+  stage: 2
+  diff: 2
+  rating: 3
+  date: <месяц проведения>
+  format: offline
+
+
+$XXX_2024:
+  $: $XXX
+  name_2: 2024-2025
+  date: 2024-2025
+
+XXX_2024_qual:
+  $: $XXX_2024 $XXX_qual
+  date: <конкретная дата>
+
+XXX_2024_final:
+  $: $XXX_2024 $XXX_final
+  date: <конкретная дата>
+
+
+\n  name_0: (.+)\n
+\n  name: '{name_main} {name_year}, {name_stage}'\n  name_main: \1\n  name_year: <год>\n  name_stage: <этап>\n
+
+
+
+<script>
+</script>
+</body>
+</html>

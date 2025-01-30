@@ -5,13 +5,17 @@ $vseros:
   name_stage: <этап>
   url: https://vos.olimpiada.ru/
   num_stages: 4
-  solutions_url: https://olympiads.mccme.ru/vmo/
+  urls:
+    - url: https://vos.olimpiada.ru/
+      note: сайт
+    - url: https://olympiads.mccme.ru/vmo/
+      note: архив задач
 
 $vseros_0:
   $: $vseros
   name_stage: пригласительный этап
   diff: 1
-  grades: 4-11
+  grades: 3-10
   stage: 0
   date: '?'
   format: online
@@ -61,7 +65,614 @@ $vseros_5:
   format: offline
 
 
+## 2008 год
+$vseros_2008:
+  $: $vseros
+  name_year: 2008-2009
 
+# vseros_2008_1: # нет информации
+#   $: $vseros_1 $vseros_2008
+#   date: x.10.2008 - x.10.2008
+
+vseros_2008_2:
+  $: $vseros_2 $vseros_2008
+  date: 14.12.2008
+
+vseros_2008_3:
+  $: $vseros_3 $vseros_2008
+  date:
+    - moment: 23.01.2009
+      note: 1-й день
+    - moment: 24.01.2009
+      note: 2-й день
+
+vseros_2008_4:
+  $: $vseros_4 $vseros_2008
+  date: 25.04.2009 - 30.04.2009
+  place: г.Кисловодск
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/35/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/35/sheets2.pdf
+      note: условия 2-й день
+
+
+## 2009 год
+$vseros_2009:
+  $: $vseros
+  name_year: 2009-2010
+
+# vseros_2009_1: # нет информации
+#   $: $vseros_1 $vseros_2009
+#   date: x.10.2009 - x.10.2009
+
+vseros_2009_2:
+  $: $vseros_2 $vseros_2009
+  date: 13.12.2009
+
+vseros_2009_3:
+  $: $vseros_3 $vseros_2009
+  date:
+    - moment: 19.01.2010
+      note: 1-й день
+    - moment: 20.01.2010
+      note: 2-й день
+
+vseros_2009_4:
+  $: $vseros_4 $vseros_2009
+  date: 25.04.2010 - 30.04.2010
+  place: г.Майкоп
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2010/final/2010-v-1.pdf
+      note: условия и решения 1-й день (порядок листов перепутан)
+    - url: https://olympiads.mccme.ru/vmo/2010/final/2010-v-2.pdf
+      note: условия и решения 2-й день (порядок листов перепутан)
+
+
+
+
+## 2010 год
+$vseros_2010:
+  $: $vseros
+  name_year: 2010-2011
+
+# vseros_2010_1: # нет информации
+#   $: $vseros_1 $vseros_2010
+#   date: x.10.2010 - x.10.2010
+
+vseros_2010_2:
+  $: $vseros_2 $vseros_2010
+  date: 12.12.2010
+
+vseros_2010_3:
+  $: $vseros_3 $vseros_2010
+  date:
+    - moment: 25.01.2011
+      note: 1-й день
+    - moment: 26.01.2011
+      note: 2-й день
+
+vseros_2010_4:
+  $: $vseros_4 $vseros_2010
+  date: 25.04.2011 - 30.04.2011
+  place: г.Новгород
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2011/final/sheets1.PDF
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2011/final/sheets2.PDF
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2011/final/day1.PDF
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2011/final/day2.PDF
+      note: решения 2-й день
+
+
+
+
+## 2011 год
+$vseros_2011:
+  $: $vseros
+  name_year: 2011-2012
+
+# vseros_2011_1: # нет информации
+#   $: $vseros_1 $vseros_2011
+#   date: x.10.2011 - x.10.2011
+
+vseros_2011_2:
+  $: $vseros_2 $vseros_2011
+  date: 11.12.2011
+
+vseros_2011_3:
+  $: $vseros_3 $vseros_2011
+  date:
+    - moment: 27.01.2012
+      note: 1-й день
+    - moment: 28.01.2012
+      note: 2-й день
+
+vseros_2011_4:
+  $: $vseros_4 $vseros_2011
+  date: 23.04.2012 - 28.04.2012
+  place: г.Смоленск
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2012/final/sheets1.PDF
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2012/final/sheets2.PDF
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2012/final/v12-1.PDF
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2012/final/v12-2.PDF
+      note: решения 2-й день
+
+
+
+
+## 2012 год
+$vseros_2012:
+  $: $vseros
+  name_year: 2012-2013
+
+# vseros_2012_1: # нет информации
+#   $: $vseros_1 $vseros_2012
+#   date: x.10.2012 - x.10.2012
+
+vseros_2012_2:
+  $: $vseros_2 $vseros_2012
+  date: 09.12.2012
+
+vseros_2012_3:
+  $: $vseros_3 $vseros_2012
+  date:
+    - moment: 26.01.2013
+      note: 1-й день
+    - moment: 27.01.2013
+      note: 2-й день
+
+vseros_2012_4:
+  $: $vseros_4 $vseros_2012
+  date: 23.04.2013 - 29.04.2013
+  place: г.Саров
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2013/final/sheets1.PDF
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2013/final/sheets2.PDF
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2013/final/v13-1.PDF
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2013/final/v13-2.PDF
+      note: решения 2-й день
+
+
+
+
+## 2013 год
+$vseros_2013:
+  $: $vseros
+  name_year: 2013-2014
+
+vseros_2013_1:
+  $: $vseros_1 $vseros_2013
+  date: 01.10.2013 - 05.10.2013
+
+vseros_2013_2:
+  $: $vseros_2 $vseros_2013
+  date: 08.12.2013
+
+vseros_2013_3:
+  $: $vseros_3 $vseros_2013
+  date:
+    - moment: 04.02.2014
+      note: 1-й день
+    - moment: 05.02.2014
+      note: 2-й день
+
+vseros_2013_4:
+  $: $vseros_4 $vseros_2013
+  date: 24.04.2014 - 30.04.2014
+  place: г.Ярославл
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2014/final/sheets1.PDF
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2014/final/sheets2.PDF
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2014/final/v14-1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2014/final/v14-2.pdf
+      note: решения 2-й день
+
+
+
+
+## 2014 год
+$vseros_2014:
+  $: $vseros
+  name_year: 2014-2015
+
+vseros_2014_1:
+  $: $vseros_1 $vseros_2014
+  date: 22.09.2014 - 29.09.2014
+
+vseros_2014_2:
+  $: $vseros_2 $vseros_2014
+  date: 07.12.2014
+
+vseros_2014_3:
+  $: $vseros_3 $vseros_2014
+  date:
+    - moment: 02.02.2015
+      note: 1-й день
+    - moment: 03.02.2015
+      note: 2-й день
+
+vseros_2014_4:
+  $: $vseros_4 $vseros_2014
+  date: 23.04.2015 - 29.04.2015
+  place: г.Казань
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2015/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2015/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2015/final/day1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2015/final/day1.pdf
+      note: решения 2-й день
+
+
+
+
+## 2015 год
+$vseros_2015:
+  $: $vseros
+  name_year: 2015-2016
+
+vseros_2015_1:
+  $: $vseros_1 $vseros_2015
+  date: 19.10.2015 - 25.10.2015
+
+vseros_2015_2:
+  $: $vseros_2 $vseros_2015
+  date: 06.12.2015
+
+vseros_2015_3:
+  $: $vseros_3 $vseros_2015
+  date:
+    - moment: 05.02.2016
+      note: 1-й день
+    - moment: 06.02.2016
+      note: 2-й день
+
+vseros_2015_4:
+  $: $vseros_4 $vseros_2015
+  date: 21.04.2016 - 29.04.2016
+  place: г.Санкт-Петербург
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2016/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2016/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2016/final/day1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2016/final/day2.pdf
+      note: решения 2-й день
+
+
+
+
+## 2016 год
+$vseros_2016:
+  $: $vseros
+  name_year: 2016-2017
+
+vseros_2016_1:
+  $: $vseros_1 $vseros_2016
+  date: 10.10.2016 - 16.10.2016
+
+vseros_2016_2:
+  $: $vseros_2 $vseros_2016
+  date: 04.12.2016
+
+vseros_2016_3:
+  $: $vseros_3 $vseros_2016
+  date:
+    - moment: 30.01.2017
+      note: 1-й день
+    - moment: 31.01.2017
+      note: 2-й день
+
+vseros_2016_4:
+  $: $vseros_4 $vseros_2016
+  date: 24.04.2017 - 30.04.2017
+  place: г.Калининград
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2017/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2017/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2017/final/day1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2017/final/day2.pdf
+      note: решения 2-й день
+
+
+
+
+## 2017 год
+$vseros_2017:
+  $: $vseros
+  name_year: 2017-2018
+
+vseros_2017_1:
+  $: $vseros_1 $vseros_2017
+  date: 16.10.2017 - 22.10.2017
+
+vseros_2017_2:
+  $: $vseros_2 $vseros_2017
+  date: 03.12.2017
+
+vseros_2017_3:
+  $: $vseros_3 $vseros_2017
+  date:
+    - moment: 31.01.2018
+      note: 1-й день
+    - moment: 01.02.2018
+      note: 2-й день
+
+vseros_2017_4:
+  $: $vseros_4 $vseros_2017
+  date: 23.04.2018 - 28.04.2018
+  place: г.Екатеринбург
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2018/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2018/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2018/final/v18.pdf
+      note: решения
+
+
+
+
+## 2018 год
+$vseros_2018:
+  $: $vseros
+  name_year: 2018-2019
+
+vseros_2018_1:
+  $: $vseros_1 $vseros_2018
+  date: 15.10.2018 - 21.10.2018
+
+vseros_2018_2:
+  $: $vseros_2 $vseros_2018
+  date: 02.12.2018
+
+vseros_2018_3:
+  $: $vseros_3 $vseros_2018
+  date:
+    - moment: 01.02.2019
+      note: 1-й день
+    - moment: 02.02.2019
+      note: 2-й день
+
+vseros_2018_4:
+  $: $vseros_4 $vseros_2018
+  date: 21.04.2019 - 27.04.2019
+  place: г.Пермь
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2019/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2019/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2019/final/day1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2019/final/day2.pdf
+      note: решения 2-й день
+
+
+
+
+## 2019 год
+$vseros_2019:
+  $: $vseros
+  name_year: 2019-2020
+
+vseros_2019_1:
+  $: $vseros_1 $vseros_2019
+  date: 14.10.2019 - 20.10.2019
+
+vseros_2019_2:
+  $: $vseros_2 $vseros_2019
+  date: 1.12.2019
+
+vseros_2019_3:
+  $: $vseros_3 $vseros_2019
+  date:
+    - moment: 03.02.2020
+      note: 1-й день
+    - moment: 04.02.2020
+      note: 2-й день
+
+vseros_2019_4:
+  $: $vseros_4 $vseros_2019
+  date: отменен
+  urls:
+    - url: http://government.ru/dep_news/39516/
+      note: решение об отмене
+
+
+
+
+## 2020 год
+$vseros_2020:
+  $: $vseros
+  name_year: 2020-2021
+
+vseros_2020_1:
+  $: $vseros_1 $vseros_2020
+  date: 21.10.2020 - 23.10.2020
+
+vseros_2020_2:
+  $: $vseros_2 $vseros_2020
+  date:
+    - moment: 10.12.2020
+      note: 7-8 классы
+    - moment: 06.12.2020
+      note: 9-11 классы
+
+vseros_2020_3:
+  $: $vseros_3 $vseros_2020
+  date:
+    - moment: 05.02.2021
+      note: 1-й день
+    - moment: 06.02.2021
+      note: 2-й день
+
+vseros_2020_4:
+  $: $vseros_4 $vseros_2020
+  date: 16.04.2021 - 22.04.2021
+  place: г.Тюмень
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2021/final/day1.pdf
+      note: условия и решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2021/final/day2.pdf
+      note: условия и решения 2-й день
+
+
+
+## 2021 год
+$vseros_2021:
+  $: $vseros
+  name_year: 2021-2022
+
+vseros_2021_1:
+  $: $vseros_1 $vseros_2021
+  date:
+    - start: 18.10.2021 - 20.10.2021
+      note: 4-6 классы
+    - moment: 19.10.2021
+      note: 7-11 классы
+
+vseros_2021_2:
+  $: $vseros_2 $vseros_2021
+  date:
+    - moment: 01.12.2021
+      note: 7-8 классы
+    - moment: 02.12.2021
+      note: 9 класс
+    - moment: 05.12.2021
+      note: 10-11 классы
+
+vseros_2021_3:
+  $: $vseros_3 $vseros_2021
+  date:
+    - moment: 04.02.2022
+      note: 1-й день
+    - moment: 05.02.2022
+      note: 2-й день
+
+vseros_2021_4:
+  $: $vseros_4 $vseros_2021
+  date: 17.04.2022 - 23.04.2022
+  place: г.Саранск
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2022/final/day1.pdf
+      note: условияи решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2022/final/day2.pdf
+      note: условияи решения 2-й день
+
+
+
+
+## 2022 год
+$vseros_2022:
+  $: $vseros
+  name_year: 2022-2023
+
+vseros_2022_1:
+  $: $vseros_1 $vseros_2022
+  date:
+    - start: 19.10.2022 - 21.10.2022
+      note: 4-6 классы
+    - moment: 19.10.2022
+      note: 7-11 классы
+
+vseros_2022_2:
+  $: $vseros_2 $vseros_2022
+  date:
+    - moment: 30.11.2022
+      note: 7-8 классы
+    - moment: 01.12.2022
+      note: 9 класс
+    - moment: 02.12.2022
+      note: 10-11 классы
+
+vseros_2022_3:
+  $: $vseros_3 $vseros_2022
+  date:
+    - moment: 13.02.2023
+      note: 1-й день
+    - moment: 14.02.2023
+      note: 2-й день
+
+vseros_2022_4:
+  $: $vseros_4 $vseros_2022
+  date: 21.04.2023 - 27.04.2023
+  place: ФТ «Сириус»
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2023/final/sheets1.pdf
+      note: условия 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2023/final/sheets2.pdf
+      note: условия 2-й день
+    - url: https://olympiads.mccme.ru/vmo/2023/final/day1.pdf
+      note: решения 1-й день
+    - url: https://olympiads.mccme.ru/vmo/2023/final/day2.pdf
+      note: решения 2-й день
+
+
+
+
+## 2023 год
+$vseros_2023:
+  $: $vseros
+  name_year: 2023-2024
+
+vseros_2023_1:
+  $: $vseros_1 $vseros_2023
+  date:
+    - start: 18.10.2023 - 20.10.2023
+      note: 4-6 классы
+    - moment: 17.10.2023
+      note: 7-11 классы
+
+vseros_2023_2:
+  $: $vseros_2 $vseros_2023
+  date:
+    - moment: 28.11.2023
+      note: 7-8 классы
+    - moment: 29.11.2023
+      note: 9 класс
+    - moment: 30.11.2023
+      note: 10-11 классы
+
+vseros_2023_3:
+  $: $vseros_3 $vseros_2023
+  date:
+    - moment: 31.01.2024
+      note: 1-й день
+    - moment: 01.02.2024
+      note: 2-й день
+
+vseros_2023_4:
+  $: $vseros_4 $vseros_2023
+  date: 19.04.2024 - 25.04.2024
+  place: г.Нижний Новгород
+  urls:
+    - url: https://olympiads.mccme.ru/vmo/2024/final/sol.pdf
+      note: условия и решения
+
+
+
+## 2024 год
 $vseros_2024:
   $: $vseros
   name_year: 2024-2025
@@ -89,11 +700,50 @@ vseros_2024_3:
   $: $vseros_3 $vseros_2024
   date:
     - moment: 31.01.2025
-      note: 1 day
+      note: 1-й день
     - moment: 01.02.2025
-      note: 2 day
+      note: 2-й день
 
 vseros_2024_4:
   $: $vseros_4 $vseros_2024
   date: 16.04.2025 - 22.04.2025
+  place: ФТ «Сириус»
+
+
+
+
+# ## 2025 год
+# $vseros_2025:
+#   $: $vseros
+#   name_year: 2025-2026
+
+# vseros_2025_1:
+#   $: $vseros_1 $vseros_2025
+#   date:
+#     - start: x.10.2025 - x.10.2025
+#       note: 4-6 классы
+#     - moment: x.10.2025
+#       note: 7-11 классы
+
+# vseros_2025_2:
+#   $: $vseros_2 $vseros_2025
+#   date:
+#     - moment: x.12.2025
+#       note: 7-8 классы
+#     - moment: x.12.2025
+#       note: 9 класс
+#     - moment: x.12.2025
+#       note: 10-11 классы
+
+# vseros_2025_3:
+#   $: $vseros_3 $vseros_2025
+#   date:
+#     - moment: x.01.2026
+#       note: 1-й день
+#     - moment: x.02.2026
+#       note: 2-й день
+
+# vseros_2025_4:
+#   $: $vseros_4 $vseros_2025
+#   date: x.04.2026 - x.04.2026
 

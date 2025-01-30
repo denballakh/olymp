@@ -986,7 +986,9 @@ $belchonok:
   name_year: <год>
   name_stage: <этап>
   url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/
-  solutions_url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/arkhiv/
+  solutions_url:
+    - url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/arkhiv/
+      note: архив
   num_stages: 2
   grades: 2-11
   other: 'Красноярск и региональные площадки
@@ -1037,7 +1039,9 @@ $izumrud:
   name_year: <год>
   name_stage: <этап>
   url: https://izumrud.urfu.ru/ru/main/math/
-  solutions_url: https://izumrud.urfu.ru/ru/about/archive
+  solutions_url:
+    - url: https://izumrud.urfu.ru/ru/about/archive
+      note: архив
   num_stages: 2
   grades: 8-11
   other: 'Россия: Екатеринбург, Красноярск, Новосибирск, Омск, Пермь, Уфа, Челябинск
@@ -1094,7 +1098,9 @@ $matprazdnik_mccme:
   name_main: Мат праздник
   name_year: <год>
   url: https://olympiads.mccme.ru/matprazdnik/
-  solutions_url: https://olympiads.mccme.ru/matprazdnik/prob.html
+  solutions_url:
+    - url: https://olympiads.mccme.ru/matprazdnik/prob.html
+      note: архив
   diff: 3
   num_stages: 1
   date: февраль
@@ -1122,7 +1128,9 @@ $rosatom:
   name_year: <год>
   name_stage: <этап>
   url: https://olymp.mephi.ru/rosatom
-  solutions_url: https://olymp.mephi.ru/rosatom/about/traning/task_of_previous_years
+  solutions_url:
+    - url: https://olymp.mephi.ru/rosatom/about/traning/task_of_previous_years
+      note: архив
   num_stages: 2
   grades: 7-11
   other: "Москва, Воронеж, Екатеринбург, Казань, Красноярск, Нижний Новгород, Новосибирск,\
@@ -1871,7 +1879,7 @@ $mathcat:
   solutions_url: https://mathcat.info/show/tasks/
   diff: 1
   num_stages: 1
-  date: 30.11.2024 - очно, 01.12.2024 - онлайн
+  date: конец ноября - начало декабря
   grades: 1-11
   format: offline
   other: "Москва, Нижний новгород, Минск, пермь, Санкт-Петербург, Уфа, Ульяновск,\
@@ -1881,7 +1889,11 @@ $mathcat:
 mathcat_2024:
   $: $mathcat
   name_year: 2024
-  date: 2024-2025
+  date:
+    - moment: 30.11.2024
+      note: очно
+    - moment: 01.12.2024
+      note: онлайн
 
 ##################################################
 
@@ -1907,7 +1919,7 @@ $olymp344_qual:
   name_stage: отборочный этап
   stage: 1
   diff: 1
-  date: 1 тур октябрь, 2 - февраль
+  date: октябрь
   format: online
 
 $olymp344_final:
@@ -1915,7 +1927,7 @@ $olymp344_final:
   name_stage: заключительный этап
   stage: 2
   diff: 1
-  date: 1 тур октябрь, 2 - февраль
+  date: февраль
   format: offline
 
 
@@ -2097,17 +2109,14 @@ $yandex:
     На платформе Яндекс Учебник (доступен на компьютерах, планшетах и смартфонах).
     Если у ученика нет аккаунта в Учебнике, родителю нужно авторизоваться в нём с
     Яндекс ID и добавить ребёнка в разделе «Мои дети».
+  '
 
-
-
-    Обязательно'
-
-yandex_2024:
+yandex_2023:
   $: $yandex
-  name_year: 2024-2025
+  name_year: 2023
   date:
-    start: 27.11.2024
-    end: 17.12.2024
+    start: 27.11.2023
+    end: 17.12.2023
 
 ##################################################
 

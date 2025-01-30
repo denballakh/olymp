@@ -68,6 +68,13 @@ class Event(NS):
         {
             'id': 'id',
             'title': 'ID',
+            'html': True,
+        },
+        {
+            'id': 'parents',
+            'title': 'Связанное',
+            'sortable': False,
+            'html': True,
         },
         {
             'id': 'name',
@@ -76,9 +83,6 @@ class Event(NS):
         {
             'id': 'stage',
             'title': 'Этап',
-            'style': {
-                'width': '2ch',
-            }
         },
         {
             'id': 'url',
@@ -108,8 +112,8 @@ class Event(NS):
             'title': 'Формат',
         },
         {
-            'id': 'solutions_url',
-            'title': 'Ссылка на решения',
+            'id': 'urls',
+            'title': 'Ссылки',
             'sortable': False,
             'html': True,
         },
@@ -117,7 +121,7 @@ class Event(NS):
     table_columns = [
         {
             'sortable': True,
-            'visible': True,
+            # 'visible': True,
         }
         | c
         for c in table_columns
@@ -138,7 +142,10 @@ class Event(NS):
 
     def display(self) -> dict[str, t.Any]:
         res = {
-            'id': self.id,
+            'id': RespItem(
+                f'<a id="{self.id.replace('$', '_meta_')}" href="#{self.id.replace('$', '_meta_')}">{self.id}</a>',
+                sort_key=self.id),
+            'parents': format_parents(self),
             'is_meta': self.id.startswith('$'),
             # 'name': ', '.join(str(v) for k, v in sorted(self.items()) if k.startswith('name') if v),
             'name': self.name.format_map(self) if self.name is not junk else no_value,
@@ -178,8 +185,8 @@ class Event(NS):
                 if self.format is not junk
                 else no_value
             ),
-            'solutions_url': (
-                format_solutions_url(self.solutions_url) if self.solutions_url else no_value
+            'urls': (
+                format_urls(self.urls) if self.urls else no_value
             ),
             'raw': repr(self),
             'mro': repr([x.id for x in self.mro()]),
@@ -212,6 +219,18 @@ class Event(NS):
         res = {k: RespItem(v, v) if not isinstance(v, RespItem) else v for k, v in res.items()}
         res = {k: dataclasses.asdict(v) for k, v in res.items()}
         return res
+
+
+def format_parents(self: Event) -> str:
+    import gc
+    res = ''
+    for e in [
+        *self.__C_b__,
+        *[e for e in gc.get_objects() if isinstance(e, Event) and self in e.__C_b__],
+    ]:
+        if 'id' in e:
+            res += html_link(f'#{e.id.replace('$', '_meta_')}', title=e.id) + '\n'
+    return res.strip()
 
 
 # %Y  Year with century as a decimal number.
@@ -299,7 +318,7 @@ def get_timestamp(d: t.Any) -> float | None:
             return None
 
 
-def format_solutions_url(d: t.Any) -> str:
+def format_urls(d: t.Any) -> str:
     match d:
         case str():
             return html_link(d, '=>')
@@ -391,7 +410,17 @@ def _load_segment(text: str, blt: C[str, Event]) -> C[str, Event]:
         if 'grades' in defi:
             event.grades = parse_grades(defi.pop('grades'))
 
+        if 'urls' in defi:
+            event.urls = event.get('urls', []) + defi.pop('urls')
+
         event.__C_d__ |= defi
+
+        # if id.lstrip('$') in events or '$' + id in events:
+        #     print(f'{event.id} shadows existing declaration')
+        #     print(*events)
+
+        if id in events:
+            print(f'{id} is already defined: {events[id]}')
         events[id] = event
 
     return events
