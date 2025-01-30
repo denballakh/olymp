@@ -31,7 +31,7 @@ DEBUG = '--debug' in sys.argv
 app = Flask(__name__)
 
 
-@lambda x: x if DEBUG else functools.cache
+@(lambda x: x) if DEBUG else functools.cache
 def load_data():
     return load(dir_events)
 
