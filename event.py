@@ -420,8 +420,8 @@ def _load_segment(text: str, blt: C[str, Event]) -> C[str, Event]:
         if 'grades' in defi:
             event.grades = parse_grades(defi.pop('grades'))
 
-        if 'urls' not in defi:
-            defi['urls'] = []
+        # if 'urls' not in defi:
+        #     defi['urls'] = []
         # if 'urls' in defi:
         #     event.urls = event.get('urls', []) + defi.pop('urls')
 

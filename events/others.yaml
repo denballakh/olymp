@@ -5,7 +5,7 @@ $lomonosov:
   name_year: <год>
   name_stage: <этап>
   url: https://olymp.msu.ru/
-  solutions_url: https://olymp.msu.ru/rus/page/main/29/page/olimpiady-proshlyh-let
+  urls: https://olymp.msu.ru/rus/page/main/29/page/olimpiady-proshlyh-let
   num_stages: 2
   grades: 1-11
   other: 'очно/заочно
@@ -52,11 +52,12 @@ lomonosov_2024_final:
 ##################################################
 
 $vsesib:
-  name: Всесибирская открытая олимпиада школьников по математике
+  name: '{name_main} {name_year}, {name_stage}'
+  name_main: Всесибирская открытая олимпиада школьников по математике
+  name_year: <год>
+  name_stage: <этап>
   url: https://sesc.nsu.ru/olymp-vsesib/sections/maths/
-  solutions_url: 'https://sesc.nsu.ru/olymp-vsesib/sections/maths/
-
-    В конце страницы по каждому предмету есть архив'
+  urls: https://sesc.nsu.ru/olymp-vsesib/sections/maths/
   num_stages: 2
   grades: 7-11
   other: 'очно
@@ -106,7 +107,7 @@ $kurchatov:
   name_year: <год>
   name_stage: <этап>
   url: http://olimpiadakurchatov.ru/
-  solutions_url: https://olimpiadakurchatov.ru/archive
+  urls: https://olimpiadakurchatov.ru/archive
   num_stages: 2
   grades: 6-11
   other: 'Москва, Уфа, Казань, Краснодарский край, Красноярск, Волгоград, Воронеж,
@@ -153,7 +154,7 @@ $pdmi_ras:
   name_year: <год>
   name_stage: <этап>
   url: http://www.pdmi.ras.ru/~olymp/index.html
-  solutions_url: http://www.pdmi.ras.ru/~olymp/index.html
+  urls: http://www.pdmi.ras.ru/~olymp/index.html
   num_stages: 2
   grades: 6-11
   format: offline
@@ -198,7 +199,7 @@ $yumsh:
   name_year: <год>
   name_stage: <этап>
   url: http://yumsh.ru/cms/yumsh-olymp
-  solutions_url: https://yumsh.ru/cms/yumsh-olymp/archive
+  urls: https://yumsh.ru/cms/yumsh-olymp/archive
   num_stages: 2
   grades: 4-11
   other: 'Санкт-Петербург
@@ -256,7 +257,7 @@ $hse:
   name_year: <год>
   name_stage: <этап>
   url: https://olymp.hse.ru/mmo/math
-  solutions_url: https://olymp.hse.ru/mmo/tasks-math
+  urls: https://olymp.hse.ru/mmo/tasks-math
   num_stages: 2
   grades: 7-11
   other: "очно/заочно \nОтборочный этап проходит в заочной форме в режиме онлайн-тестирования.\
@@ -299,7 +300,7 @@ $arhimedes:
   name_main: Зимний Турнир Архимеда
   name_year: <год>
   url: http://www.arhimedes.org/index.php?id=zima
-  solutions_url: справа на сайте находятся ссылки
+  urls: справа на сайте находятся ссылки
   diff: 5
   num_stages: 1
   date: январь
@@ -326,7 +327,7 @@ $spbu:
   name_year: <год>
   name_stage: <этап>
   url: https://olympiada.spbu.ru/predmety/2-uncategorised/4-matematika.html
-  solutions_url: https://olympiada.spbu.ru/arkhiv.html
+  urls: https://olympiada.spbu.ru/arkhiv.html
   num_stages: 2
   grades: 6-11
   other: 'Санкт-Петербург
@@ -376,7 +377,7 @@ $pvg:
   name_year: <год>
   name_stage: <этап>
   url: https://pvg.mk.ru/news/
-  solutions_url: https://pvg.mk.ru/archive/archive/
+  urls: https://pvg.mk.ru/archive/archive/
   num_stages: 2
   grades: 5-11
   other: 'Москва
@@ -417,13 +418,13 @@ pvg_2024_final:
 ##################################################
 
 $matolimp_spb:
-  name: '{name_num} {name_main} {name_year}, {name_stage}'
+  name: '{name_main} {name_year} {name_num}, {name_stage}'
   name_num: <номер>
   name_main: Санкт-Петербургская математическая олимпиада начальной школы
   name_year: <год>
   name_stage: <этап>
   url: http://matolimp-spb.org/
-  solutions_url: http://matolimp-spb.org/
+  urls: http://matolimp-spb.org/
   num_stages: 2
   grades: 1-4
   format: offline
@@ -452,6 +453,30 @@ $matolimp_spb_final:
   date: февраль
 
 
+matolimp_spb_2014:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2015/
+  num_stages: 1
+  name_num: I
+  name_year: 2015
+  date: 11.04.2015
+
+matolimp_spb_2015:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2016/
+  num_stages: 1
+  name_num: II
+  name_year: 2016
+  date: 14.02.2016
+
+matolimp_spb_2016:
+  $: $matolimp_spb
+  url: http://matolimp-spb.org/2017/
+  num_stages: 1
+  name_num: III
+  name_year: 2017
+  date: 29.01.2017
+
 
 $matolimp_spb_2017:
   $: $matolimp_spb
@@ -463,14 +488,14 @@ $matolimp_spb_2017:
 matolimp_spb_2017_qual:
   $: $matolimp_spb_2017 $matolimp_spb_qual
   date: 24.11.2017
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/static/landing_theme/docs/Otborochnyi_reshenia.pdf
       note: решения 1-4 классы
 
 matolimp_spb_2017_final:
   $: $matolimp_spb_2017 $matolimp_spb_final
   date: 04.02.2018
-  solutions_url:
+  urls:
     - url: https://drive.google.com/file/d/1ndUPRR6zG0qp1IIkg7WtFS_6wJRNnHa5/view?usp=sharing
       note: условия 1-4 классы
 
@@ -485,14 +510,14 @@ $matolimp_spb_2018:
 matolimp_spb_2018_qual:
   $: $matolimp_spb_2018 $matolimp_spb_qual
   date: 16.11.2018
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/static/landing_theme/docs/Reshenia_otborochnogo_tura.pdf
       note: решения 1-4 классы
 
 matolimp_spb_2018_final:
   $: $matolimp_spb_2018 $matolimp_spb_final
   date: 03.02.2019
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/static/landing_theme/docs/tasks_2019.pdf
       note: условия 1-4 классы
     - url: http://matolimp-spb.org/static/landing_theme/docs/1_2019_reshenie.pdf
@@ -515,7 +540,7 @@ $matolimp_spb_2019:
 matolimp_spb_2019_qual:
   $: $matolimp_spb_2019 $matolimp_spb_qual
   date: 15.11.2019
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2019/11/29/1_klass_zadania_otborochnogo_tura.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2019/11/29/2_klass_zadania_otborochnogo_tura.pdf
@@ -530,7 +555,7 @@ matolimp_spb_2019_qual:
 matolimp_spb_2019_final:
   $: $matolimp_spb_2019 $matolimp_spb_final
   date: 02.02.2020
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__1.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2020/02/03/2_tur_2020__2.pdf
@@ -559,14 +584,14 @@ $matolimp_spb_2020:
 matolimp_spb_2020_qual:
   $: $matolimp_spb_2020 $matolimp_spb_qual
   date: 13.11.2020
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2021/01/07/1_tur_2021__reshenia_g3bSRPD.pdf
       note: решения 1-4 классы
 
 matolimp_spb_2020_final:
   $: $matolimp_spb_2020 $matolimp_spb_final
   date: 07.02.2021
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_1kl.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2021/02/15/2_tur_2021_2kl.pdf
@@ -589,7 +614,7 @@ $matolimp_spb_2021:
 matolimp_spb_2021_qual:
   $: $matolimp_spb_2021 $matolimp_spb_qual
   date: 12.11.2021
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2021/11/15/ottur_12_11_21.pdf
       note: условия 1-4 классы
     - url: http://matolimp-spb.org/media/uploads/2021/12/06/reshenia_otborochnogo_tura_12_11_21.pdf
@@ -598,7 +623,7 @@ matolimp_spb_2021_qual:
 matolimp_spb_2021_final:
   $: $matolimp_spb_2021 $matolimp_spb_final
   date: 03.04.2022
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2022/04/10/zadania2022.pdf
       note: условия 1-4 классы
     - url: http://matolimp-spb.org/media/uploads/2022/04/17/2_tur_2022__reshenia.pdf
@@ -616,7 +641,7 @@ $matolimp_spb_2022:
 matolimp_spb_2022_qual:
   $: $matolimp_spb_2022 $matolimp_spb_qual
   date: 18.11.2022
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_1_1.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2022/11/23/1_tur_2023_2.pdf
@@ -632,7 +657,7 @@ matolimp_spb_2022_qual:
 matolimp_spb_2022_final:
   $: $matolimp_spb_2022 $matolimp_spb_final
   date: 19.02.2023
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2023/02/26/1_klass_zadania_osnovnogo_tura_2023.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2023/02/26/2_klass_zadania_osnovnogo_tura_2023.pdf
@@ -656,7 +681,7 @@ $matolimp_spb_2023:
 matolimp_spb_2023_qual:
   $: $matolimp_spb_2023 $matolimp_spb_qual
   date: 17.11.2023
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2023/11/22/1.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2023/11/22/2.pdf
@@ -671,7 +696,7 @@ matolimp_spb_2023_qual:
 matolimp_spb_2023_final:
   $: $matolimp_spb_2023 $matolimp_spb_final
   date: 18.02.2024
-  solutions_url:
+  urls:
     - url: http://matolimp-spb.org/media/uploads/2024/03/01/1_klass_osnovnoy_tur_18_02_2024.pdf
       note: условия 1 класс
     - url: http://matolimp-spb.org/media/uploads/2024/03/01/2_klass_osnovnoy_tur_18_02_2024.pdf
@@ -694,6 +719,15 @@ $matolimp_spb_2024:
 matolimp_spb_2024_qual:
   $: $matolimp_spb_2024 $matolimp_spb_qual
   date: 15.11.2024
+  urls:
+    - url: https://matolimp-spb.org/media/uploads/2024/11/22/1_tur_2025_1_loUhVaR.pdf
+      note: условия 1 класс
+    - url: https://matolimp-spb.org/media/uploads/2024/11/22/1_tur_2025_2_xLJRXZa.pdf
+      note: условия 2 класс
+    - url: https://matolimp-spb.org/media/uploads/2024/11/22/1_tur_2025_3_2ul7sYL.pdf
+      note: условия 3 класс
+    - url: https://matolimp-spb.org/media/uploads/2024/11/22/1_tur_2025_4_1WuUgCx.pdf
+      note: условия 4 класс
 
 matolimp_spb_2024_final:
   $: $matolimp_spb_2024 $matolimp_spb_final
@@ -707,9 +741,7 @@ $mmo_mccme:
   name_year: <год>
   name_stage: <этап>
   url: https://mmo.mccme.ru/
-  solutions_url: 'https://mmo.mccme.ru/2024/
-
-    Ссылки на предудущие годы находятся на главной странице'
+  urls: https://mmo.mccme.ru/2024/
   diff: 5
   num_stages: 2
   grades: 8-11
@@ -752,7 +784,10 @@ $tiim:
   name_year: <год>
   name_stage: <этап>
   url: https://xn--h1aamv.xn--p1ai/
-  solutions_url: https://xn--h1aamv.xn--p1ai/tiim2021/, https://xn--h1aamv.xn--p1ai/tiim2022/,https://xn--h1aamv.xn--p1ai/tiim2023/
+  urls:
+    - https://xn--h1aamv.xn--p1ai/tiim2021/
+    - https://xn--h1aamv.xn--p1ai/tiim2022/
+    - https://xn--h1aamv.xn--p1ai/tiim2023/
   num_stages: 2
   grades: 5-11
   other: 'Москва, Самара, Омск, Нижний Новгород
@@ -801,7 +836,7 @@ $sp_urfu:
   name_year: <год>
   name_stage: <этап>
   url: https://sp.urfu.ru/vuzakadem/matem/2024/
-  solutions_url: https://sp.urfu.ru/vuzakadem/matem/2024/old_statements.html
+  urls: https://sp.urfu.ru/vuzakadem/matem/2024/old_statements.html
   num_stages: 2
   grades: 5-11
   other: 'Екатеринбург
@@ -849,9 +884,7 @@ $ustn_geom_mccme:
   name_main: Устная олимпиада по геометрии
   name_year: <год>
   url: https://olympiads.mccme.ru/ustn/
-  solutions_url: 'https://olympiads.mccme.ru/ustn/
-
-    В конце страницы есть информация прошлых лет'
+  urls: https://olympiads.mccme.ru/ustn/
   diff: 5
   num_stages: 1
   date: апрель
@@ -881,9 +914,7 @@ $innopolis:
   name_year: <год>
   name_stage: <этап>
   url: https://dovuz.innopolis.university/pre-olympiads/innopolis-open/math
-  solutions_url: 'https://dovuz.innopolis.university/pre-olympiads/innopolis-open/math
-
-    Можно скачать сборник задач прошлых лет. Также есть материалы прошлых лет'
+  urls: https://dovuz.innopolis.university/pre-olympiads/innopolis-open/math
   num_stages: 2
   grades: 7-11
   other: "Татарстан: Иннополис\nдва отборочных заочно и финал\nhttps://dovuz.innopolis.university/pre-olympiads/innopolis-open/math\
@@ -941,7 +972,6 @@ $geomshar:
   name_year: <год>
   name_stage: <этап>
   url: https://geometry.ru/olimp/olimpsharygin.php
-  solutions_url: ' задания прикреплены пдф-файломи к каждому году'
   num_stages: 2
   grades: 8-10
   other: 'Москва
@@ -988,7 +1018,7 @@ $belchonok:
   name_year: <год>
   name_stage: <этап>
   url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/
-  solutions_url:
+  urls:
     - url: https://dovuz.sfu-kras.ru/abiturientu-sfu/olimpiady/belchonok/arkhiv/
       note: архив
   num_stages: 2
@@ -1041,7 +1071,7 @@ $izumrud:
   name_year: <год>
   name_stage: <этап>
   url: https://izumrud.urfu.ru/ru/main/math/
-  solutions_url:
+  urls:
     - url: https://izumrud.urfu.ru/ru/about/archive
       note: архив
   num_stages: 2
@@ -1100,7 +1130,7 @@ $matprazdnik_mccme:
   name_main: Мат праздник
   name_year: <год>
   url: https://olympiads.mccme.ru/matprazdnik/
-  solutions_url:
+  urls:
     - url: https://olympiads.mccme.ru/matprazdnik/prob.html
       note: архив
   diff: 3
@@ -1131,7 +1161,7 @@ $rosatom:
   name_year: <год>
   name_stage: <этап>
   url: https://olymp.mephi.ru/rosatom
-  solutions_url:
+  urls:
     - url: https://olymp.mephi.ru/rosatom/about/traning/task_of_previous_years
       note: архив
   num_stages: 2
@@ -1195,7 +1225,7 @@ $formulo:
   name_year: <год>
   name_stage: <этап>
   url: https://www.formulo.org/ru/olymp/2024-math-ru/
-  solutions_url: https://www.formulo.org/ru/olymp/
+  urls: https://www.formulo.org/ru/olymp/
   num_stages: 2
   grades: 5-11
   other: "Москва, Санкт-Петербург, Новосибирск, Екатеринбург, Казань, Нижний Новгород,\
@@ -1239,7 +1269,7 @@ $karusel:
   name_main: Интернет-карусель
   name_year: <год>
   url: https://karusel.desc.ru/
-  solutions_url: https://karusel.desc.ru/archive
+  urls: https://karusel.desc.ru/archive
   diff: 3
   num_stages: 1
   date: в течение учебного года
@@ -1268,9 +1298,7 @@ $itmo:
   name_year: <год>
   name_stage: <этап>
   url: https://olymp.itmo.ru/
-  solutions_url: 'https://olymp.itmo.ru/
-
-    Необходимо перейти во вкладку "прошедшие олимпиады"'
+  urls: https://olymp.itmo.ru/
   num_stages: 2
   grades: 5-11
   format: online
@@ -1319,9 +1347,7 @@ $olymp_mo:
   name_year: <год>
   name_stage: <этап>
   url: https://olympmo.ru/mosreg-olymp-2023-2024.html
-  solutions_url: 'https://olympmo.ru/mosreg-olymp-2023-2024.html
-
-    Необходимо перейти во вкладку "архив"'
+  urls: https://olympmo.ru/mosreg-olymp-2023-2024.html
   num_stages: 2
   grades: 5-7
   other: 'Москва
@@ -1367,9 +1393,7 @@ $ustn_mccme:
   name_main: Устная олимпиада
   name_year: <год>
   url: https://olympiads.mccme.ru/ustn/
-  solutions_url: 'https://olympiads.mccme.ru/ustn/
-
-    В конце страницы есть материал за прошлые года'
+  urls: https://olympiads.mccme.ru/ustn/
   diff: 3
   num_stages: 1
   date: апрель
@@ -1397,9 +1421,7 @@ $bibn:
   name_year: <год>
   name_stage: <этап>
   url: http://www.unn.ru/bibn/
-  solutions_url: 'http://www.unn.ru/bibn/
-
-    Архив находится слева в меню'
+  urls: http://www.unn.ru/bibn/
   num_stages: 2
   grades: 7-11
   other: 'Нижний Новгород, Красноярск, Екатеринбург, Воронеж, Казань
@@ -1448,7 +1470,7 @@ $sammat:
   name_year: <год>
   name_stage: <этап>
   url: http://sammat.ru/
-  solutions_url: https://sammat.samgtu.ru/finaltour-tasks-public
+  urls: https://sammat.samgtu.ru/finaltour-tasks-public
   num_stages: 2
   grades: 6-11
   other: "Самара, Москва, Ростов-на-Дону, Санкт-Петербург, Красноярск, Казань, Воронеж,\
@@ -1510,9 +1532,7 @@ $energy_hope:
   name_year: <год>
   name_stage: <этап>
   url: https://www.energy-hope.ru/
-  solutions_url: 'https://www.energy-hope.ru/
-
-    В меню есть раздел "Архив"'
+  urls: https://www.energy-hope.ru/
   num_stages: 2
   grades: 5-11
   other: "Смоленск, Волжский\nтренировочный и два отборочных заочно, финал очно\n\
@@ -1555,7 +1575,7 @@ $mathbaby:
   name_main: ДваждыДва
   name_year: <год>
   url: http://mathbaby.ru/olympiads
-  solutions_url: https://mathbaby.ru/olympiads/archive
+  urls: https://mathbaby.ru/olympiads/archive
   diff: 3
   num_stages: 1
   date: январь-май
@@ -1587,7 +1607,7 @@ $donstu_talant:
   name_year: <год>
   name_stage: <этап>
   url: https://donstu-talant.ru/
-  solutions_url: https://donstu-talant.ru/mathzad/
+  urls: https://donstu-talant.ru/mathzad/
   num_stages: 2
   grades: 5-11
   other: 'Ростов
@@ -1633,8 +1653,7 @@ $kvantik:
   name_main: Задачный конкурс журнала «Квантик» для школьников 5-8 классов
   name_year: <год>
   url: https://kvantik.com/konkurs/math/
-  solutions_url: https://kvantik.com/konkurs/math/2022-2023/ ссылки на прошлые года
-    на певрвой странице вкладки "Конкурсы"
+  urls: https://kvantik.com/konkurs/math/2022-2023/
   diff: 3
   num_stages: 1
   grades: 5-8
@@ -1659,7 +1678,7 @@ $enanos:
   name_year: <год>
   name_stage: <этап>
   url: https://enanos.nanometer.ru/
-  solutions_url: https://enanos.nanometer.ru/archive.html
+  urls: https://enanos.nanometer.ru/archive.html
   num_stages: 2
   grades: 5-11
   other: 'Москва
@@ -1707,8 +1726,7 @@ $femo:
   name_year: <год>
   name_stage: <этап>
   url: https://femo.kz/ru/
-  solutions_url: https://femo.kz/ru/zadachi/zadachi-2024 задания в пдф прикреплены
-    во вкладках по номерам олимпиад
+  urls: https://femo.kz/ru/zadachi/zadachi-2024
   num_stages: 3
   grades: 1-5
   other: 'Узбекистан: Ташкент
@@ -1766,7 +1784,6 @@ $uchi_ru:
   name_year: <год>
   name_stage: <этап>
   url: https://math-olymp.uchi.ru/
-  solutions_url: '-'
   num_stages: 2
   grades: 1-9
   format: online
@@ -1811,7 +1828,7 @@ $smartkang:
   name_main: Смарт-Кенгуру
   name_year: <год>
   url: https://mathkang.ru/smartkang
-  solutions_url: https://mathkang.ru/rar
+  urls: https://mathkang.ru/rar
   diff: 1
   num_stages: 1
   date: конец января
@@ -1837,7 +1854,7 @@ $kpfu:
   name_year: <год>
   name_stage: <этап>
   url: https://malun.kpfu.ru/mpo
-  solutions_url: https://malun.kpfu.ru/mpoarh
+  urls: https://malun.kpfu.ru/mpoarh
   num_stages: 2
   grades: 5-11
   other: 'Казань
@@ -1884,7 +1901,7 @@ $mathcat:
   name_main: MathCat
   name_year: <год>
   url: https://mathcat.info/
-  solutions_url: https://mathcat.info/show/tasks/
+  urls: https://mathcat.info/show/tasks/
   diff: 1
   num_stages: 1
   date: конец ноября - начало декабря
@@ -1912,7 +1929,7 @@ $olymp344:
   name_year: <год>
   name_stage: <этап>
   url: http://www.olymp344.ru/
-  solutions_url: http://www.olymp344.ru/arhiv-olimpiad
+  urls: http://www.olymp344.ru/arhiv-olimpiad
   num_stages: 2
   grades: 1-10
   other: 'Онлайн/Санкт-Петербург
@@ -1958,7 +1975,7 @@ $matznanie:
   name_main: Математическая сДача
   name_year: <год>
   url: https://www.matznanie.ru/competitions/competitions.html
-  solutions_url: https://www.matznanie.ru/examples/MAT_SDACHA/mat_sdacha_examples_12.pdf
+  urls: https://www.matznanie.ru/examples/MAT_SDACHA/mat_sdacha_examples_12.pdf
   diff: 1
   num_stages: 1
   date: март, для 3-4 и 5-6 кл проводился  в мае 2024
@@ -2010,7 +2027,7 @@ $kenguru:
   name_main: Математический конкурс "Кенгуру"
   name_year: <год>
   url: https://www.bakonkurs.by/kenguru/kenguru.php
-  solutions_url: https://www.bakonkurs.by/kenguru/kenguru_primer.php
+  urls: https://www.bakonkurs.by/kenguru/kenguru_primer.php
   diff: 1
   num_stages: 1
   grades: 1-11
@@ -2030,7 +2047,7 @@ $euler:
   name_main: Олимпиада имени Леонарда Эйлера
   name_year: <год>
   url: https://www.matol.ru/
-  solutions_url: https://www.matol.ru/archives.php
+  urls: https://www.matol.ru/archives.php
   diff: 5
   num_stages: 1
   grades: 8
@@ -2052,7 +2069,7 @@ $arcticum:
   name_year: <год>
   name_stage: <этап>
   url: https://arcticum.yanao.ru/activity/38618/
-  solutions_url: https://arcticum.yanao.ru/activity/53253/
+  urls: https://arcticum.yanao.ru/activity/53253/
   num_stages: 2
   grades: 4-11
   other: 'ЯНАО и Москва
@@ -2092,7 +2109,7 @@ $mendeleev:
   name_main: Межрегиональная многопрофильная олимпиада школьников «Менделеев» по математике
   name_year: <год>
   url: https://abiturient.utmn.ru/olimpiady/mendeleev/
-  solutions_url: https://abiturient.utmn.ru/olimpiady/mendeleev/arkhiv-2023-2024/
+  urls: https://abiturient.utmn.ru/olimpiady/mendeleev/arkhiv-2023-2024/
   diff: 3
   num_stages: 1
   grades: 5-7
@@ -2183,7 +2200,7 @@ $ormo_tsu:
   name_year: <год>
   name_stage: <этап>
   url: https://abiturient.tsu.ru/ru/content/ormo
-  solutions_url: https://abiturient.tsu.ru/ru/content/answers-ORMO
+  urls: https://abiturient.tsu.ru/ru/content/answers-ORMO
   num_stages: 2
   grades: 8-11
   other: 'В нескольких городах есть, можно подать аявку на проведение у себя в школе

@@ -1,6 +1,6 @@
 $systematika:
   $: $$math
-  name: '{name_num} {name_main}'
+  name: '{name_main} {name_num}'
   name_num: <номер>
   name_main: Олимипиада Систематики
   url: https://systematika.org/olimpiada/
@@ -27,7 +27,7 @@ systematika_02:
   stage: 1
   date: 14.01.2018
   urls:
-    - https://systematika.org/olimpiada/year-2018 /
+    - https://systematika.org/olimpiada/year-2018/
 
 
 ## 03
@@ -37,7 +37,7 @@ systematika_03:
   stage: 1
   date: 30.10.2018
   urls:
-    - https://systematika.org/olimpiada/year-2018 /
+    - https://systematika.org/olimpiada/year-2018/
 
 
 ## 04
@@ -47,7 +47,7 @@ systematika_04:
   stage: 1
   date: 27.01.2019
   urls:
-    - https://systematika.org/olimpiada/year-2019 /
+    - https://systematika.org/olimpiada/year-2019/
 
 
 ## 05
@@ -57,7 +57,7 @@ systematika_05:
   stage: 1
   date: 29.09.2019
   urls:
-    - https://systematika.org/olimpiada/year-2019 /
+    - https://systematika.org/olimpiada/year-2019/
 
 
 ## 06
@@ -114,7 +114,7 @@ systematika_10:
 ## Начиная с 11 олимпиада состоит из двух туров
 $systematika$since_11:
   $: $systematika
-  name: '{name_num} {name_main}, {name_stage}'
+  name: '{name_main} {name_num}, {name_stage}'
   name_stage: <этап>
   num_stages: 2
 

@@ -1,6 +1,6 @@
 $vseros:
   $: $$math
-  name: '{name_cnt} {name_main} {name_year}, {name_stage}'
+  name: '{name_main} {name_year} {name_cnt}, {name_stage}'
   name_cnt: <номер>
   name_main: ВсОШ
   name_year: <год>

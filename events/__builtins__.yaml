@@ -2,3 +2,15 @@ $$math:
   discipline: math
 $$physics:
   discipline: physics
+
+$year:
+  name: '{date}'
+  date: <год>
+
+year_2024:
+  $: $year
+  date: 2024
+
+year_2025:
+  $: $year
+  date: 2025
