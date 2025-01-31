@@ -1,56 +1,493 @@
-$mipt:
+# https://olymp-online.mipt.ru/page/primery-zadanij
+# https://olymp.mipt.ru/olympiad/about
+# https://web.archive.org/web/20131213155013/http://olymp.mipt.ru/rules
+
+$mipt$v1: # 2007-2015
+  $: $$math
   name: '{name_main} {name_year}, {name_stage}'
   name_main: Олимпиада школьников «Физтех»
   name_year: <год>
   name_stage: <этап>
-  url: https://olymp-online.mipt.ru/
-  solutions_url: https://olymp-online.mipt.ru/page/primery-zadanij
-  grades: 9-11
   num_stages: 2
+  grades: 7-11 # ?
+  urls:
+    - url: https://olymp.mipt.ru/
+      note: старый сайт
+    - url: https://olymp-online.mipt.ru/
+      note: новый сайт
 
-
-$mipt_qual:
-  $: $mipt
-  name_stage: отборочный этап
+$mipt_qual$v1:
+  $: $mipt$v1
   stage: 1
-  diff: 3
-  date: октябрь-ноябрь
-  format: online
+  name_stage: отборочный этап
 
-$mipt_final:
-  $: $mipt
-  name_stage: финальный этап
+$mipt_final$v1:
+  $: $mipt$v1
   stage: 2
-  diff: 5
-  rating: 1
-  date: февраль
-  format: offline
+  grades: 11
+  name_stage: заключительный этап
 
 
 
+
+## 2006-2007 год
+$mipt_2007:
+  $: $mipt$v1
+  name_year: 2006-2007
+  date: 2006-2007
+
+mipt_2007_qual:
+  $: $mipt_2007 $mipt_qual$v1
+  # date: XXX
+
+mipt_2007_final:
+  $: $mipt_2007 $mipt_final$v1
+  # date: XXX
+
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/ca1542cf5002724e2f037aaee6cfc542c0be32a3.pdf
+      note: условия и ответы
+
+
+## 2007-2008 год
+$mipt_2008:
+  $: $mipt$v1
+  name_year: 2007-2008
+  date: 2007-2008
+
+mipt_2008_qual:
+  $: $mipt_2008 $mipt_qual$v1
+  # date: XXX
+
+mipt_2008_final:
+  $: $mipt_2008 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/732e8c66b3464d29eef15ef57e1e1716516955db.pdf
+      note: условия и ответы
+
+
+
+
+## 2008-2009 год
+$mipt_2009:
+  $: $mipt$v1
+  name_year: 2008-2009
+  date: 2008-2009
+
+mipt_2009_qual:
+  $: $mipt_2009 $mipt_qual$v1
+  # date: XXX
+
+mipt_2009_final:
+  $: $mipt_2009 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/12244f4e68d7935d2e57ace0e89819d40c62b5b8.pdf
+      note: условия и ответы
+
+
+
+
+## 2009-2010 год
+$mipt_2010:
+  $: $mipt$v1
+  name_year: 2009-2010
+  date: 2009-2010
+
+mipt_2010_qual:
+  $: $mipt_2010 $mipt_qual$v1
+  # date: XXX
+
+mipt_2010_final:
+  $: $mipt_2010 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/2a7b0e644196ee1f1b2be37eeed867a53d39a069.pdf
+      note: условия и ответы
+
+
+
+
+## 2010-2011 год
+$mipt_2011:
+  $: $mipt$v1
+  name_year: 2010-2011
+  date: 2010-2011
+
+mipt_2011_qual:
+  $: $mipt_2011 $mipt_qual$v1
+  # date: XXX
+
+mipt_2011_final:
+  $: $mipt_2011 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/db28feb701b4c26a65c85f67a7d3bf098841758c.pdf
+      note: условия и ответы
+
+
+
+
+## 2011-2012 год
+$mipt_2012:
+  $: $mipt$v1
+  name_year: 2011-2012
+  date: 2011-2012
+
+mipt_2012_qual:
+  $: $mipt_2012 $mipt_qual$v1
+  # date: XXX
+
+mipt_2012_final:
+  $: $mipt_2012 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/90107fdb8bdb2ad8f06730773b8f69e0945e1f3f.pdf
+      note: условия, решения и критерии
+
+
+
+
+## 2012-2013 год
+$mipt_2013:
+  $: $mipt$v1
+  name_year: 2012-2013
+  date: 2012-2013
+
+mipt_2013_qual:
+  $: $mipt_2013 $mipt_qual$v1
+  # date: XXX
+
+mipt_2013_final:
+  $: $mipt_2013 $mipt_final$v1
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/35cbf31b5ce4650fe3a95ef99ab261b29d925411.pdf
+      note: условия, решения и критерии
+
+
+
+
+## 2013-2014 год
+$mipt_2014:
+  $: $mipt$v1
+  name_year: 2013-2014
+  date: 2013-2014
+
+mipt_2014_qual:
+  $: $mipt_2014 $mipt_qual$v1
+  date: 04.11.2013 - 08.01.2014
+
+mipt_2014_final:
+  $: $mipt_2014 $mipt_final$v1
+  date: 01.03.2014 - 02.03.2014
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/e5980bde34ef0bc1987cdfcf1d2b1b6198a0ab92.pdf
+      note: условия, решения и критерии
+
+
+
+## 2014-2015 год
+$mipt_2015:
+  $: $mipt$v1
+  name_year: 2014-2015
+  date: 2014-2015
+
+mipt_2015_qual:
+  $: $mipt_2015 $mipt_qual$v1
+  # date: XXX
+
+mipt_2015_final:
+  $: $mipt_2015 $mipt_final$v1
+  # date: XXX
+  grades: 10-11
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/804182d0672de5c1a4b33977321ae76b667df9f7.pdf
+      note: условия, решения и критерии 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/05fcc0e32ce49623561ce1daf6bb2124a55d2d26.pdf
+      note: условия, решения и критерии 11 класса
+
+
+
+
+$mipt$v2: # 2016-...
+  $: $mipt$v1
+  grades: 9-11
+
+$mipt_qual$v2:
+  $: $mipt$v2 $mipt_qual$v1
+
+$mipt_final$v2:
+  $: $mipt$v2 $mipt_final$v1
+
+
+
+
+## 2015-2016 год
+$mipt_2016:
+  $: $mipt$v2
+  name_year: 2015-2016
+  date: 2015-2016
+
+mipt_2016_qual:
+  $: $mipt_2016 $mipt_qual$v2
+  # date: XXX
+
+mipt_2016_final:
+  $: $mipt_2016 $mipt_final$v2
+  # date: XXX
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/e4db8ed9896bcbe777692016993e055ebbb220a8.pdf
+      note: условия, решения и критерии 9 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/ddf91f22b6426a4bc9c0f80f1eafde3a09709375.pdf
+      note: условия, решения и критерии 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/ec6d105ecaa16cff1e904d5de769cac4a63b881f.pdf
+      note: условия, решения и критерии 11 класса
+
+
+
+## 2016-2017 год
+$mipt_2017:
+  $: $mipt$v2
+  name_year: 2016-2017
+  date: 2016-2017
+
+mipt_2017_qual:
+  $: $mipt_2017 $mipt_qual$v2
+  # date: XXX
+
+mipt_2017_final:
+  $: $mipt_2017 $mipt_final$v2
+  date: 25.02.2017 - 26.02.2017
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c25c190f80ddb73c6822cb45a8f355d88a3ac7ba.pdf
+      note: условия, решения и критерии 9 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/b12f16eaf0deed29c4203c3b4944472562b98613.pdf
+      note: условия, решения и критерии 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/5042de89b5685bbcd45f98ac96bc5e1b2831a095.pdf
+      note: условия, решения и критерии 11 класса
+
+
+
+## 2017-2018 год
+$mipt_2018:
+  $: $mipt$v2
+  name_year: 2017-2018
+  date: 2017-2018
+
+mipt_2018_qual:
+  $: $mipt_2018 $mipt_qual$v2
+  date: 30.09.2017 - 04.02.2018
+
+mipt_2018_final:
+  $: $mipt_2018 $mipt_final$v2
+  date: 24.02.2018
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/9c009ec53acd2eded3034e1ba88a31e960fa0a1a.pdf
+      note: условия, решения и критерии 9 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/cdaae38911338dd4e314982ef071554bdd95fa34.pdf
+      note: условия, решения и критерии 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/2cfe0843f10eccb97115bc9d905fa344fea9cc45.pdf
+      note: условия, решения и критерии 11 класса
+    - url: https://youtu.be/aybcNlDJuEU
+      note: онлайн-разбор
+
+
+
+## 2018-2019 год
+$mipt_2019:
+  $: $mipt$v2
+  name_year: 2018-2019
+  date: 2018-2019
+
+mipt_2019_qual:
+  $: $mipt_2019 $mipt_qual$v2
+  date: 01.10.2018 - 03.02.2019
+
+mipt_2019_final:
+  $: $mipt_2019 $mipt_final$v2
+  date: 23.02.2019
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/a01a18ff0bb0aed6f0b52b1e872a4acaa4d739c3.pdf
+      note: условия, решения и критерии 9 класса, билеты 1-2
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/39a369226bf7b66fde6fffd8a947d9186bf507a3.pdf
+      note: условия, решения и критерии 9 класса, билеты 9-10
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/d7157784085ca695225c6c9118a23a874cc037fb.pdf
+      note: условия, решения и критерии 10 класса, билеты 3-4
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c6771911e2b11108626b137fb646ec634aaadf63.pdf
+      note: условия, решения и критерии 10 класса, билеты 11-12
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/aecd5e230051d619f6df0c3dd3938c248576abc9.pdf
+      note: условия, решения и критерии 11 класса, билеты 5-6
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/baa971caa756294f676fa6c7104ca3fb8e9904ff.pdf
+      note: условия, решения и критерии 11 класса, билеты 13-16
+
+
+
+## 2019-2020 год
+$mipt_2020:
+  $: $mipt$v2
+  name_year: 2019-2020
+  date: 2019-2020
+
+mipt_2020_qual:
+  $: $mipt_2020 $mipt_qual$v2
+  date: 15.10.2019 - 02.02.2020
+
+mipt_2020_final:
+  $: $mipt_2020 $mipt_final$v2
+  date: 22.02.2020
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/e4c9b83ad72956782708cbb3a8a2dbddf2e0e2e4/М9.pdf
+      note: условия 9 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/9d1b99611b927210755291d721dc4d45c6607e6a/Решения%20и%20критерии%20М9-1-2.pdf
+      note: решения и критерии 9 класса, варианты 1-2
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/5f76b2bd49bdc397457a70b2e4cc011da22f9e9f/Решения%20и%20критерии%20М9-9-10.pdf
+      note: решения и критерии 9 класса, варианты 9-10
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/f5b5e333e999d47ac8236ae4394f1dfaad1a4ce0/М10.pdf
+      note: условия 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/814ded29c7628dfaf02d5a04a227fa2a08153ccf/Решения%20и%20критерии%20М10-3-4.pdf
+      note: решения и критерии 10 класса, варианты 3-4
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c4c4bb230c860c220a14b3cba1903b1c98d3492e/Решения%20и%20критерии%20М10-11-12.pdf
+      note: решения и критерии 10 класса, варианты 11-12
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/bc8d7fe9298eb2fa58c511bfb163811ba9d6de76/М11.pdf
+      note: условия 11 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/a34136344917ec64e53651dc260a150c961decaa/Решения%20и%20критерии%2011-5-8.pdf
+      note: решения и критерии 11 класса, варианты 5-8
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/88d077ca7f051165c5abf7e36334adbdffa22126/Решения%20и%20критерии%20М11-13-16.pdf
+      note: решения и критерии 11 класса, варианты 13-16
+    - url: https://youtu.be/guzwerxE5PY
+      note: онлайн-разбор, 11 класс, варианты 5-8
+
+
+
+## 2020-2021 год
+$mipt_2021:
+  $: $mipt$v2
+  name_year: 2020-2021
+  date: 2020-2021
+
+mipt_2021_qual:
+  $: $mipt_2021 $mipt_qual$v2
+  # date: XXX
+
+mipt_2021_final:
+  $: $mipt_2021 $mipt_final$v2
+  date: 20.02.2021
+  urls:
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/ef66a5f643be41d0838776dffe79f0f14de88e05/Физтех2021-9класс%20Solutions.pdf
+      note: условия и решения 9 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/dcab6857036fc0878252d36e57561520d995c730/Физтех2021МатематикаИнструкция9.pdf
+      note: критерии 9 класса
+
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/ef85f5deeac8f16139040a39bf7e39184d406e35/Физтех2021-10класс%20Solutions.pdf
+      note: условия и решения 10 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c5ec494cb5a6b100553c8a4f6c180b896586d87f/MIPT_2021-10%20Instruction.pdf
+      note: критерии 10 класса
+
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c7d688275b107b010c9d2ca55c6b1e1bc631d4e0/11Solutions.pdf
+      note: условия и решения 11 класса
+    - url: https://olymp.mipt.ru/uploads/media/default/0001/01/c5ec494cb5a6b100553c8a4f6c180b896586d87f/MIPT_2021-10%20Instruction.pdf
+      note: критерии 11 класса
+
+    - url: https://youtu.be/IW2CMHqHVjs
+      note: разбор 9 класса, 1 часть
+    - url: https://youtu.be/LTcwQTkeWX0
+      note: разбор 9 класса, 2 часть
+
+    - url: https://youtu.be/jDUelzk5HlE
+      note: разбор 10 класса, 1 часть
+    - url: https://youtu.be/ZPOdND8-hnE
+      note: разбор 10 класса, 2 часть
+
+    - url: https://youtu.be/f_EMFFu6uFw
+      note: разбор 11 класса, 1 часть
+    - url: https://youtu.be/3vTCUCVvdCo
+      note: разбор 11 класса, 2 часть
+
+
+
+
+## 2021-2022 год
+$mipt_2022:
+  $: $mipt$v2
+  name_year: 2021-2022
+  date: 2021-2022
+
+mipt_2022_qual:
+  $: $mipt_2022 $mipt_qual$v2
+  date: 11.10.2021 - 30.01.2022
+
+mipt_2022_final:
+  $: $mipt_2022 $mipt_final$v2
+  date: 12.02.2022
+  urls:
+    - url: https://olymp-online.mipt.ru/page/primery-zadanij
+      note: ссылки на решения тут
+
+
+
+## 2022-2023 год
+$mipt_2023:
+  $: $mipt$v2
+  name_year: 2022-2023
+  date: 2022-2023
+  urls:
+    - url: https://olymp-online.mipt.ru/page/primery-zadanij
+      note: ссылки на решения тут
+
+mipt_2023_qual:
+  $: $mipt_2023 $mipt_qual$v2
+  date: 12.11.2022 - 04.12.2022
+
+mipt_2023_final:
+  $: $mipt_2023 $mipt_final$v2
+  date: 19.02.2023
+
+
+## 2023-2024 год
 $mipt_2024:
-  $: $mipt
+  $: $mipt$v2
+  name_year: 2023-2024
+  date: 2023-2024
+  urls:
+    - url: https://olymp-online.mipt.ru/page/primery-zadanij
+      note: ссылки на решения тут
+
+mipt_2024_qual:
+  $: $mipt_2024 $mipt_qual$v2
+  date:
+    - moment: 15.10.2023
+      note: 1 тур
+    - moment: 22.10.2023
+      note: 2 тур
+    - moment: 05.11.2023
+      note: 3 тур (только 11 классы)
+
+mipt_2024_final:
+  $: $mipt_2024 $mipt_final$v2
+  date: 11.02.2024
+
+
+## 2024-2025 год
+$mipt_2025:
+  $: $mipt$v2
   name_year: 2024-2025
   url: https://olymp-online.mipt.ru/event/375
   date: 2024-2025
 
-mipt_2024_qual_1:
-  $: $mipt_qual $mipt_2024
-  date: 13.10.2024 10:00
+mipt_2025_qual:
+  $: $mipt_qual$v2 $mipt_2025
+  date:
+    - moment: 10:00 13.10.2024
+      note: 1 тур
+    - moment: 08:00 27.10.2024
+      note: 2 тур
+    - moment: 10:00 03.11.2024
+      note: 3 тур (только 11 классы)
 
-mipt_2024_qual_2:
-  $: $mipt_qual $mipt_2024
-  date: 27.10.2024 8:00
-
-mipt_2024_qual_3:
-  $: $mipt_qual $mipt_2024
-  grades: 11
-  date: 03.11.2024 10:00
-
-mipt_2024_final:
-  $: $mipt_final $mipt_2024
+mipt_2025_final:
+  $: $mipt_final$v2 $mipt_2025
   date: 16.02.2025
-
-
-
+  registration_date: 12:00 09.12.2024 - 12:00 27.12.2024
 

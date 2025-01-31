@@ -235,7 +235,7 @@ def format_parents(self: Event) -> str:
     res = ''
     for e in [
         *self.__C_b__,
-        *[e for e in gc.get_objects() if isinstance(e, Event) and self in e.__C_b__],
+        # *[e for e in gc.get_objects() if isinstance(e, Event) and self in e.__C_b__],
     ]:
         if 'id' in e:
             res += html_link(f'#{e.id.replace('$', '_meta_')}', title=e.id) + ' '
@@ -412,6 +412,7 @@ def _load_segment(text: str, blt: C[str, Event]) -> C[str, Event]:
             raise Exception(
                 f"non-abstract base(s) specified in {id}: {[id for id in base_ids if not id.startswith('$')]}"
             )
+        # print(defi)
         bases = [events[id] for id in base_ids]
         event = Event(b=bases)
         event.id = id
